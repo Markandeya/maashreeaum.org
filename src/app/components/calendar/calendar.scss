@@ -1,0 +1,46 @@
+// Calendar Section
+.calendar-section {
+    background-color: #fff;
+    padding: 5rem 0;
+
+    .section-title {
+        color: #333;
+        font-size: 2.5rem;
+        font-weight: 400;
+    }
+
+    .calendar-container {
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+}
+
+// Mobile Responsiveness
+@media (max-width: 768px) {
+    .calendar-section {
+        padding: 3rem 0;
+
+        .section-title {
+            font-size: 2rem;
+        }
+
+        .calendar-container iframe {
+            height: 400px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .calendar-section {
+        padding: 2rem 0;
+
+        .section-title {
+            font-size: 1.75rem;
+        }
+
+        .calendar-container iframe {
+            height: 350px;
+        }
+    }
+}

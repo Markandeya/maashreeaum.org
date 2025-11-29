@@ -1,0 +1,374 @@
+.shreeja-ashram-container {
+    font-family: 'Outfit', sans-serif;
+    color: #333;
+
+    .hero-section {
+        position: relative;
+        height: 80vh;
+        background-image: url('https://www.maashreeaum.org/assets/img/shreeja-ashram-hero.jpg'); // Placeholder, need actual asset or use the one from screenshots if possible, but for now I'll use a placeholder or try to find the real one if I can inspect the page source. 
+        // Actually, I'll use a gradient overlay for now as I don't have the asset.
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/shreejashram.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+
+            h1 {
+                font-size: 4rem;
+                font-weight: 700;
+                margin-bottom: 1rem;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            }
+
+            p {
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+
+    .section {
+        padding: 4rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        h2 {
+            font-size: 2.5rem;
+            color: #d35400; // Saffron/Orange color typical for ashrams
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+    }
+
+    .about-section {
+        background: linear-gradient(180deg, #fffbf0 0%, #fff 100%); // Soft Divine Gold/Cream Gradient
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        text-align: center; // Explicitly enforce centering
+
+        .subtitle {
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #888;
+            font-weight: 600;
+        }
+
+        .section-title {
+            color: #2e5c46 !important; // Dark green, force override
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        .lead {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+            font-weight: 400;
+            font-style: normal;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .text-muted {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: #555 !important;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .offerings-section {
+        background-color: #f9f9f9;
+
+        .offerings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+
+            .offering-card {
+                background: white;
+                padding: 2rem;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                text-align: center;
+
+                h3 {
+                    font-size: 1.5rem;
+                    margin-bottom: 1rem;
+                    color: #d35400;
+                }
+            }
+        }
+    }
+
+    .location-section {
+        text-align: center;
+    }
+
+    .getting-there-section {
+        background: linear-gradient(180deg, #ffffff 0%, #FAF3E0 100%); // Starts white, fades to Light Beige
+        padding: 5rem 0;
+        font-family: 'Montserrat', sans-serif;
+
+        .subtitle {
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #888;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            color: #B07D62; // Muted Earthy Terracotta
+            font-size: 2.5rem;
+            font-weight: 400;
+        }
+
+        .address-box {
+            .address-label {
+                font-size: 0.8rem;
+                font-weight: 700;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: #B07D62; // Muted Earthy Terracotta
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.6;
+                color: #444;
+                margin-bottom: 0;
+            }
+        }
+
+        .map-container {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+            iframe {
+                display: block;
+            }
+        }
+
+        .transport-card {
+            background-color: #F5EBE0; // Very Light Earthy Beige
+            padding: 2rem;
+            text-align: center;
+            height: 100%;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            .icon {
+                font-size: 2.5rem;
+                color: #B07D62; // Muted Earthy Terracotta
+                margin-bottom: 1.5rem;
+                display: block;
+            }
+
+            p {
+                font-size: 0.95rem;
+                line-height: 1.6;
+                color: #333;
+                margin: 0 auto; // Center text
+                max-width: 85%; // Constrain width for readability
+            }
+        }
+    }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .shreeja-ashram-container {
+        .hero-section {
+            height: 60vh;
+
+            .hero-content {
+                padding: 15px;
+
+                h1 {
+                    font-size: 2.5rem;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        .section {
+            padding: 3rem 1rem;
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        .about-section {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+
+            .subtitle {
+                font-size: 0.7rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .lead {
+                font-size: 1rem;
+            }
+
+            .text-muted {
+                font-size: 0.95rem;
+            }
+        }
+
+        .offerings-section {
+            .offerings-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+
+                .offering-card {
+                    padding: 1.5rem;
+
+                    h3 {
+                        font-size: 1.25rem;
+                    }
+                }
+            }
+        }
+
+        .getting-there-section {
+            padding: 3rem 0;
+
+            .subtitle {
+                font-size: 0.7rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .address-box {
+                margin-bottom: 2rem;
+
+                p {
+                    font-size: 0.95rem;
+                }
+            }
+
+            .map-container {
+                margin-bottom: 2rem;
+
+                iframe {
+                    height: 300px;
+                }
+            }
+
+            .transport-card {
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+
+                .icon {
+                    font-size: 2rem;
+                }
+
+                p {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .shreeja-ashram-container {
+        .hero-section {
+            height: 50vh;
+
+            .hero-content {
+                h1 {
+                    font-size: 2rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .section {
+            padding: 2rem 1rem;
+
+            h2 {
+                font-size: 1.75rem;
+            }
+        }
+
+        .about-section {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+        }
+
+        .getting-there-section {
+            padding: 2rem 0;
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .map-container iframe {
+                height: 250px;
+            }
+
+            .transport-card {
+                padding: 1.25rem;
+
+                .icon {
+                    font-size: 1.75rem;
+                }
+            }
+        }
+    }
+}

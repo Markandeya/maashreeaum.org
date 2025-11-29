@@ -1,0 +1,150 @@
+.activities-section {
+    padding: 8rem 0;
+    background-color: #f9f9f9;
+}
+
+.section-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    display: block;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.activity-card {
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.activity-image {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    &:hover img {
+        transform: scale(1.05);
+    }
+}
+
+.activity-content {
+    padding: 2rem;
+}
+
+.activity-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.activity-text {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.activity-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: #666;
+    }
+}
+
+.divider-decoration {
+    display: flex;
+    justify-content: center;
+
+    .section-divider {
+        width: 200px;
+        height: auto;
+        opacity: 0.8;
+    }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .activities-section {
+        padding: 4rem 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .activity-card {
+        margin-bottom: 1.5rem;
+    }
+
+    .activity-image {
+        height: 200px;
+    }
+
+    .activity-content {
+        padding: 1.5rem;
+    }
+
+    .activity-title {
+        font-size: 1.1rem;
+    }
+
+    .activity-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .activities-section {
+        padding: 3rem 1rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .activity-content {
+        padding: 1.25rem;
+    }
+
+    .divider-decoration .section-divider {
+        width: 150px;
+    }
+}

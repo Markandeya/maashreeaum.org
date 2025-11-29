@@ -1,0 +1,231 @@
+/* Global styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+:root {
+    --primary-color: #000;
+    --secondary-color: #666;
+    --accent-color: #fdb94e;
+    --light-bg: #e8e4dc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    &:hover {
+        background-color: #333;
+        border-color: #333;
+        transform: translateY(-1px);
+    }
+}
+
+/* Remove default Bootstrap margins */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-bottom: 0;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========================================
+   RESPONSIVE UTILITIES
+   ======================================== */
+
+/* Breakpoint Variables */
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+/* Responsive Typography */
+h1,
+.h1 {
+    font-size: 2rem;
+
+    @media (min-width: $breakpoint-md) {
+        font-size: 2.5rem;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+        font-size: 3rem;
+    }
+}
+
+h2,
+.h2 {
+    font-size: 1.75rem;
+
+    @media (min-width: $breakpoint-md) {
+        font-size: 2rem;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+        font-size: 2.5rem;
+    }
+}
+
+h3,
+.h3 {
+    font-size: 1.5rem;
+
+    @media (min-width: $breakpoint-md) {
+        font-size: 1.75rem;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+        font-size: 2rem;
+    }
+}
+
+h4,
+.h4 {
+    font-size: 1.25rem;
+
+    @media (min-width: $breakpoint-md) {
+        font-size: 1.5rem;
+    }
+}
+
+h5,
+.h5 {
+    font-size: 1.1rem;
+
+    @media (min-width: $breakpoint-md) {
+        font-size: 1.25rem;
+    }
+}
+
+h6,
+.h6 {
+    font-size: 1rem;
+
+    @media (min-width: $breakpoint-md) {
+        font-size: 1.1rem;
+    }
+}
+
+/* Responsive Spacing Utilities */
+.section-padding {
+    padding: 3rem 1rem;
+
+    @media (min-width: $breakpoint-md) {
+        padding: 4rem 2rem;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+        padding: 6rem 2rem;
+    }
+}
+
+.section-padding-sm {
+    padding: 2rem 1rem;
+
+    @media (min-width: $breakpoint-md) {
+        padding: 3rem 2rem;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+        padding: 4rem 2rem;
+    }
+}
+
+/* Mobile-First Container */
+.container-responsive {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (min-width: $breakpoint-sm) {
+        max-width: 540px;
+    }
+
+    @media (min-width: $breakpoint-md) {
+        max-width: 720px;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+        max-width: 960px;
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+
+    @media (min-width: $breakpoint-xl) {
+        max-width: 1140px;
+    }
+}
+
+/* Responsive Helper Classes */
+.text-mobile-center {
+    text-align: center;
+
+    @media (min-width: $breakpoint-md) {
+        text-align: left;
+    }
+}
+
+.hide-mobile {
+    display: none;
+
+    @media (min-width: $breakpoint-md) {
+        display: block;
+    }
+}
+
+.show-mobile {
+    display: block;
+
+    @media (min-width: $breakpoint-md) {
+        display: none;
+    }
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Prevent horizontal scroll on mobile */
+body {
+    overflow-x: hidden;
+}

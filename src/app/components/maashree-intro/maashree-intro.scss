@@ -1,0 +1,150 @@
+.maashree-intro-section {
+    padding: 6rem 0;
+    background-color: #fff;
+    position: relative;
+}
+
+.divider-decoration {
+    display: flex;
+    justify-content: center;
+
+    .section-divider {
+        width: 200px;
+        height: auto;
+        opacity: 0.8;
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.section-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    display: block;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 300;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+}
+
+.section-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    font-weight: 300;
+}
+
+.audio-player-wrapper {
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.audio-player {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 50px;
+}
+
+.btn-warning {
+    background-color: #f5a623;
+    border-color: #f5a623;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: #e09612;
+        border-color: #e09612;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(245, 166, 35, 0.3);
+    }
+}
+
+.leaf-decoration {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.leaf-img {
+    width: 60px;
+    height: auto;
+    opacity: 0.6;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .maashree-intro-section {
+        padding: 3rem 1rem;
+    }
+
+    .section-label {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .section-text {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .audio-player-wrapper {
+        margin: 2rem 0;
+    }
+
+    .btn-warning {
+        font-size: 0.8rem;
+        padding: 0.75rem 2rem;
+    }
+
+    .leaf-decoration {
+        margin-top: 2rem;
+    }
+
+    .leaf-img {
+        width: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .maashree-intro-section {
+        padding: 2rem 1rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .divider-decoration .section-divider {
+        width: 150px;
+    }
+}

@@ -1,0 +1,91 @@
+.shreejaashram-section {
+    background-color: #e8e4dc;
+    padding: 6rem 0;
+}
+
+.shreejaashram-image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shreejaashram-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    /* Increased radius */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    /* Soft shadow */
+    max-width: 90%;
+    /* Give it some breathing room */
+    max-height: 90%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.shreejaashram-content {
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.welcome-text {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #888;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    display: block;
+}
+
+.section-title {
+    font-size: 2.75rem;
+    /* Refined size */
+    font-weight: 400;
+    /* Slightly bolder */
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.section-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+@media (max-width: 991px) {
+    .shreejaashram-section {
+        padding: 4rem 0;
+    }
+
+    .shreejaashram-image-wrapper {
+        margin-bottom: 2rem;
+    }
+
+    .shreejaashram-image {
+        max-width: 100%;
+        max-height: 100%;
+        margin: 0;
+    }
+
+    .shreejaashram-content {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .section-title {
+        font-size: 2.25rem;
+    }
+}
