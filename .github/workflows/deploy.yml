@@ -30,3 +30,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist/maashreeaum-web/browser
           publish_branch: gh-pages
+          force_orphan: true
