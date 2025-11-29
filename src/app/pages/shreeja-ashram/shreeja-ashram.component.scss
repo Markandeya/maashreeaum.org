@@ -7,7 +7,7 @@
         height: 80vh;
         background-image: url('https://www.maashreeaum.org/assets/img/shreeja-ashram-hero.jpg'); // Placeholder, need actual asset or use the one from screenshots if possible, but for now I'll use a placeholder or try to find the real one if I can inspect the page source. 
         // Actually, I'll use a gradient overlay for now as I don't have the asset.
-        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('shreejashram.jpg');
+        background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/shreejashram.jpg');
         background-size: cover;
         background-position: center;
         display: flex;
