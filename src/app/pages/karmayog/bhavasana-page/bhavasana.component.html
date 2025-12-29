@@ -2,32 +2,93 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-overlay"></div>
-        <span class="love-tag">MEDITATION</span>
-        <h1>Bhavasana</h1>
-        <p class="hero-subtitle">Cultivating inner peace and spiritual awareness</p>
     </section>
 
-    <!-- Content Section -->
+    <!-- What Is Bhavasana Section -->
     <section class="content-section">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-10 text-center">
-                    <h2 class="section-title">Meditation Practice</h2>
+                    <h6 class="subtitle mb-3">YOGASANAM</h6>
+                    <h2 class="section-title">What Is Bhavasana?</h2>
                     <p class="lead mb-4">
-                        Bhavasana creates a sacred space for inner transformation, guiding seekers towards a deeper
-                        connection with the divine presence within.
-                    </p>
-                    <p>
-                        Through the practice of Bhavasana and meditation, we learn to quiet the mind and open our hearts
-                        to the subtle vibrations of grace. It is a journey from the noise of the external world to the
-                        profound silence of our inner being.
-                    </p>
-                    <p>
-                        Regular practice helps in developing clarity, emotional balance, and spiritual strength,
-                        enabling us to live with greater awareness and compassion.
+                        When Yog asanas with bhava (feeling or intent) it connects our mind to the essence of the
+                        posture and helps us cultivate not just physical benefits, but also mental qualities, like
+                        reverence, steadiness, flexibility, and surrender.
                     </p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Our Programs Section -->
+    <section class="programs-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h2 class="section-title">Our Programs</h2>
+                    <p class="lead mb-4">
+                        Our mission is to spread the spiritual wisdom of Maashree on yoga practice and meditation with
+                        people of all ages and backgrounds.
+                    </p>
+                    <p>
+                        We have conducted sessions across Mumbai, Coimbatore and Kolkata in reputed institutions like
+                        SNDT University, Narsee Monjee University, Vinayaka Mission University, The Heritage School
+                        (Kolkata), Jadavpur University, Lady Brabourne College and other institutions. We have also
+                        conducted sessions in offices like the Indian Register of Shipping (IRS) on International Yoga
+                        Day 2023 and the Bank of India (Barasat Zonal HQ).
+                    </p>
+                    <p>
+                        Our interactive sessions start with a brief discourse on meditation and Yoga in everyday life,
+                        followed by a guided demonstration of asanas, pranayam and dhyan, ending with Q&A or follow-up
+                        discussion with the audience.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reach Out Section -->
+    <section class="reach-out-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center contact-card">
+                    <h2 class="section-title mb-4">How to reach out for a session</h2>
+                    <p class="mb-4">
+                        To request a session at your school, college or office - please email us directly at:
+                    </p>
+                    <a href="mailto:uttarannofmaashree@gmail.com" class="btn btn-dark">
+                        uttarannofmaashree@gmail.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Gallery</h2>
+            <div class="gallery-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide" *ngFor="let image of galleryImages; let i = index"
+                        [class.active]="i === currentSlide">
+                        <img [src]="image.src" [alt]="image.alt">
+                    </div>
+                </div>
+                <button class="carousel-btn prev" (click)="prevSlide()">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <button class="carousel-btn next" (click)="nextSlide()">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+                <div class="carousel-dots">
+                    <span *ngFor="let image of galleryImages; let i = index" class="dot"
+                        [class.active]="i === currentSlide" (click)="goToSlide(i)">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </div>
