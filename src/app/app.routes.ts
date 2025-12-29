@@ -6,6 +6,7 @@ import { DonatePage } from './pages/donate-page/donate-page';
 import { NewsletterJan2025Component } from './pages/newsletters/newsletter-jan-2025/newsletter-jan-2025';
 import { NewslettersOverviewComponent } from './pages/newsletters/newsletters-overview/newsletters-overview';
 import { NotFoundComponent } from './pages/not-found/not-found';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy';
 
 export const routes: Routes = [
     { path: '', component: LandingPage },
@@ -13,7 +14,9 @@ export const routes: Routes = [
     { path: 'shreeja-ashram', component: ShreejaAshramComponent },
     { path: 'donate', component: DonatePage },
     { path: 'newsletters', component: NewslettersOverviewComponent },
+
     { path: 'newsletters/jan-2025', component: NewsletterJan2025Component },
+    { path: 'privacy-policy', component: PrivacyPolicyComponent },
     { path: '404', component: NotFoundComponent },
     { path: '**', component: NotFoundComponent }
 ];

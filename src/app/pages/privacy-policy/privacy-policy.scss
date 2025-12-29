@@ -1,0 +1,33 @@
+.privacy-policy-container {
+    padding-top: 120px;
+    /* Account for fixed header */
+    min-height: 80vh;
+}
+
+.page-title {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    color: var(--color-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+
+    li {
+        margin-bottom: 0.5rem;
+    }
+}
+
+p {
+    line-height: 1.7;
+    color: var(--color-text);
+}
