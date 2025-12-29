@@ -1,0 +1,423 @@
+.stand-for-animals-container {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+// Hero Section
+.hero-section {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+        url('/stand-for-animals-header.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+
+    .love-tag {
+        display: inline-block;
+        background: #2e5c46;
+        color: white;
+        padding: 0.4rem 1.5rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 300;
+        color: white;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 400;
+    }
+}
+
+// Section Styling
+.subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #888;
+    font-weight: 600;
+}
+
+.section-title {
+    color: #2e5c46;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+// Mission Section
+.mission-section {
+    background: linear-gradient(180deg, #fffbf0 0%, #fff 100%);
+    padding: 5rem 0;
+
+    .lead {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #444;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .love-tag {
+        display: inline-block;
+        background: #2e5c46;
+        color: white;
+        padding: 0.4rem 1.5rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin: 0 auto;
+    }
+
+    .video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+// Join Section
+.join-section {
+    padding: 4rem 0;
+    background: #fff;
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    p {
+        color: #666;
+        font-size: 1rem;
+        max-width: 500px;
+        margin: 0 auto 1.5rem;
+    }
+
+    .btn-primary {
+        background-color: #d4a574;
+        border-color: #d4a574;
+        padding: 0.75rem 2.5rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: #c49464;
+            border-color: #c49464;
+            transform: translateY(-2px);
+        }
+    }
+}
+
+// Gallery Section
+.gallery-section {
+    padding: 5rem 0;
+    background: linear-gradient(180deg, #fff 0%, #f5f5f5 100%);
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .gallery-carousel {
+        position: relative;
+        max-width: 900px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 8px;
+
+        .carousel-container {
+            position: relative;
+            height: 500px;
+
+            .carousel-slide {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: opacity 0.5s ease;
+
+                &.active {
+                    opacity: 1;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 8px;
+                }
+            }
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            color: #333;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+            &:hover {
+                background: #fff;
+                transform: translateY(-50%) scale(1.1);
+            }
+
+            &.prev {
+                left: 1rem;
+            }
+
+            &.next {
+                right: 1rem;
+            }
+        }
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.5rem;
+
+            .dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.5);
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &.active {
+                    background: #fff;
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+
+// Contact Section
+.contact-section {
+    padding: 5rem 0;
+    background: #f9f9f9;
+
+    .contact-card {
+        background: #fff;
+        padding: 3rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+        .section-title {
+            font-size: 1.75rem;
+        }
+
+        .form-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-control {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 0.75rem 1rem;
+            font-size: 0.95rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+            &:focus {
+                border-color: #2e5c46;
+                box-shadow: 0 0 0 3px rgba(46, 92, 70, 0.1);
+            }
+
+            &::placeholder {
+                color: #aaa;
+            }
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-dark {
+            background-color: #1a1a1a;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: #333;
+                transform: translateY(-2px);
+            }
+        }
+    }
+}
+
+// Social Section
+.social-section {
+    padding: 3rem 0;
+    background: #fff;
+
+    .social-label {
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        color: #888;
+        font-weight: 600;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+
+        a {
+            color: #333;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: #2e5c46;
+                transform: translateY(-3px);
+            }
+        }
+    }
+}
+
+// Responsive Styles
+@media (max-width: 991px) {
+    .hero-section {
+        height: 60vh;
+        min-height: 400px;
+
+        .hero-banner {
+            padding: 2rem 2.5rem;
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .mission-section,
+    .video-section,
+    .gallery-section,
+    .contact-section {
+        padding: 4rem 0;
+    }
+
+    .gallery-section {
+        .gallery-carousel {
+            .carousel-container {
+                height: 400px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-section {
+        height: 50vh;
+        min-height: 350px;
+
+        .hero-banner {
+            padding: 1.5rem 2rem;
+            margin: 0 1rem;
+
+            .love-tag {
+                padding: 0.3rem 1rem;
+                font-size: 0.75rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .mission-section,
+    .video-section,
+    .gallery-section,
+    .contact-section {
+        padding: 3rem 0;
+    }
+
+    .gallery-section {
+        .gallery-carousel {
+            .carousel-container {
+                height: 300px;
+            }
+
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .contact-section {
+        .contact-card {
+            padding: 2rem 1.5rem;
+        }
+    }
+
+    .join-section {
+        padding: 3rem 0;
+    }
+}

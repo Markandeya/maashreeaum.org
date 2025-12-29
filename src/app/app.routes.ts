@@ -7,6 +7,8 @@ import { NewsletterJan2025Component } from './pages/newsletters/newsletter-jan-2
 import { NewslettersOverviewComponent } from './pages/newsletters/newsletters-overview/newsletters-overview';
 import { NotFoundComponent } from './pages/not-found/not-found';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy';
+import { StandForAnimalsComponent } from './pages/karmayog/stand-for-animals-page/stand-for-animals.component';
+import { BhavasanaComponent } from './pages/karmayog/bhavasana-page/bhavasana.component';
 
 export const routes: Routes = [
     { path: '', component: LandingPage },
@@ -14,8 +16,9 @@ export const routes: Routes = [
     { path: 'shreeja-ashram', component: ShreejaAshramComponent },
     { path: 'donate', component: DonatePage },
     { path: 'newsletters', component: NewslettersOverviewComponent },
-
     { path: 'newsletters/jan-2025', component: NewsletterJan2025Component },
+    { path: 'karmayog/stand-for-animals', component: StandForAnimalsComponent },
+    { path: 'karmayog/bhavasana', component: BhavasanaComponent },
     { path: 'privacy-policy', component: PrivacyPolicyComponent },
     { path: '404', component: NotFoundComponent },
     { path: '**', component: NotFoundComponent }

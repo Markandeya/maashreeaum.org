@@ -68,9 +68,11 @@
     transition: all 0.2s ease;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &.active {
         background-color: #f0f0f0;
         color: #000;
+        font-weight: 600;
     }
 }
 

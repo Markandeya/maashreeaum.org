@@ -1,0 +1,66 @@
+<div class="stand-for-animals-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h6 class="subtitle mb-3">Jivadaya</h6>
+                    <h2 class="section-title mb-4">Stand for Animals</h2>
+                    <p class="lead mb-4">
+                        In our world today, the treatment of animals at slaughterhouses and factory farms is often
+                        inhumane and cruel. Animals are fellow living beings that we share the planet earth with, and
+                        they deserve our respect and kindness. We started this initiative to bring awareness towards the
+                        plight of these silent beings and invoke our own humanity.
+                    </p>
+                    <p class="love-tag">
+                        LOVE
+                    </p>
+                </div>
+            </div>
+            <!-- Video embedded in mission section -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-9">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/vs-dOQL0ZV4"
+                            title="Please Don't Kill Us - Stand For Animals" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Gallery</h2>
+            <div class="gallery-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide" *ngFor="let image of galleryImages; let i = index"
+                        [class.active]="i === currentSlide">
+                        <img [src]="image.src" [alt]="image.alt">
+                    </div>
+                </div>
+                <button class="carousel-btn prev" (click)="prevSlide()">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <button class="carousel-btn next" (click)="nextSlide()">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+                <div class="carousel-dots">
+                    <span *ngFor="let image of galleryImages; let i = index" class="dot"
+                        [class.active]="i === currentSlide" (click)="goToSlide(i)">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

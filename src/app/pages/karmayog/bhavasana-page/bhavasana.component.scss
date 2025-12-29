@@ -1,0 +1,113 @@
+// Hero Section
+.hero-section {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+        url('/bhavasan-header.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+
+    .love-tag {
+        display: inline-block;
+        background: #2e5c46;
+        color: white;
+        padding: 0.4rem 1.5rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 300;
+        color: white;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 400;
+    }
+}
+
+// Content Section
+.content-section {
+    padding: 5rem 0;
+    background: linear-gradient(180deg, #fffbf0 0%, #fff 100%);
+
+    .section-title {
+        color: #2e5c46;
+        font-size: 2.5rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+    }
+
+    .lead {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #444;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    p {
+        color: #666;
+        font-size: 1rem;
+        line-height: 1.8;
+        max-width: 800px;
+        margin: 0 auto 1.5rem;
+    }
+}
+
+// Responsive Styles
+@media (max-width: 991px) {
+    .hero-section {
+        height: 60vh;
+        min-height: 400px;
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    .content-section {
+        padding: 4rem 0;
+
+        .section-title {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-section {
+        height: 50vh;
+        min-height: 350px;
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 0.9rem;
+        }
+    }
+
+    .content-section {
+        padding: 3rem 0;
+
+        .section-title {
+            font-size: 1.75rem;
+        }
+    }
+}
