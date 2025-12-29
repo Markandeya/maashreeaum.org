@@ -1,5 +1,7 @@
 .navbar {
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 1000;
 }
 
 .navbar-collapse {
@@ -17,7 +19,7 @@
 }
 
 .nav-link {
-    color: #666 !important;
+    color: #666;
     font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 1.2px;
@@ -26,7 +28,7 @@
 
     &:hover,
     &.active {
-        color: #000 !important;
+        color: #000;
         font-weight: 700;
     }
 }
@@ -52,14 +54,23 @@
 .dropdown-menu {
     margin-top: 0.5rem;
     padding: 0.5rem 0;
+    background-color: #ffffff;
+    min-width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .dropdown-item {
     font-size: 0.85rem;
-    padding: 0.5rem 1.5rem;
+    padding: 0.65rem 1.5rem;
+    color: #333;
+    transition: all 0.2s ease;
 
-    &:hover {
-        background-color: #f8f9fa;
+    &:hover,
+    &:focus {
+        background-color: #f0f0f0;
+        color: #000;
     }
 }
 
@@ -70,7 +81,7 @@
     }
 
     .navbar-brand img {
-        height: 45px !important;
+        height: 45px;
     }
 
     .navbar-collapse {
@@ -80,12 +91,12 @@
     }
 
     .navbar-nav {
-        gap: 0.5rem !important;
+        gap: 0.5rem;
     }
 
     .nav-link {
-        padding: 0.75rem 0 !important;
-        text-align: left !important;
+        padding: 0.75rem 0;
+        text-align: left;
         font-size: 0.85rem;
     }
 
@@ -104,6 +115,6 @@
     }
 
     .d-flex.ms-lg-auto {
-        margin-left: 0 !important;
+        margin-left: 0;
     }
 }
