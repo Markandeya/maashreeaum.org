@@ -6,7 +6,7 @@ import { Uttarann } from '../../components/uttarann/uttarann';
 import { Shreejaashram } from '../../components/shreejaashram/shreejaashram';
 import { MaashreeSays } from '../../components/maashree-says/maashree-says';
 import { Activities } from '../../components/activities/activities';
-import { CalendarComponent } from '../../components/calendar/calendar';
+
 
 @Component({
     selector: 'app-landing-page',
@@ -19,7 +19,7 @@ import { CalendarComponent } from '../../components/calendar/calendar';
         Shreejaashram,
         MaashreeSays,
         Activities,
-        CalendarComponent
+
     ],
     templateUrl: './landing-page.html',
 })
