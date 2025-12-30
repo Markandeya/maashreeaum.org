@@ -94,6 +94,9 @@
 
     .navbar-nav {
         gap: 0.5rem;
+        flex-direction: column; // Force vertical stack
+        align-items: flex-start !important; // Align items to the left
+        width: 100%; // Full width
     }
 
     .nav-link {
