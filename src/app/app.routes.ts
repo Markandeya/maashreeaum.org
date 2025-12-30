@@ -9,6 +9,7 @@ import { NotFoundComponent } from './pages/not-found/not-found';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy';
 import { StandForAnimalsComponent } from './pages/karmayog/stand-for-animals-page/stand-for-animals.component';
 import { BhavasanaComponent } from './pages/karmayog/bhavasana-page/bhavasana.component';
+import { ShreeGuruVidyalayaComponent } from './pages/karmayog/shree-guru-vidyalaya-page/shree-guru-vidyalaya.component';
 
 export const routes: Routes = [
     { path: '', component: LandingPage },
@@ -19,6 +20,7 @@ export const routes: Routes = [
     { path: 'newsletters/jan-2025', component: NewsletterJan2025Component },
     { path: 'karmayog/stand-for-animals', component: StandForAnimalsComponent },
     { path: 'karmayog/bhavasana', component: BhavasanaComponent },
+    { path: 'karmayog/shree-guru-vidyalaya', component: ShreeGuruVidyalayaComponent },
     { path: 'privacy-policy', component: PrivacyPolicyComponent },
     { path: '404', component: NotFoundComponent },
     { path: '**', component: NotFoundComponent }
