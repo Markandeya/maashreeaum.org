@@ -1,7 +1,7 @@
 // Hero Section
 .hero-section {
     position: relative;
-    height: 90vh;
+    height: 70dvh;
     min-height: 600px;
     background: url('/shree-guru-vidyalay-header.png');
     background-size: cover;
@@ -244,7 +244,7 @@
 // Responsive Styles
 @media (max-width: 991px) {
     .hero-section {
-        height: 80vh;
+        height: 60dvh;
 
         h1 {
             font-size: 2.25rem;
@@ -264,7 +264,7 @@
 
 @media (max-width: 767px) {
     .hero-section {
-        height: 70vh;
+        height: 50dvh;
         padding: 1rem;
 
         h1 {

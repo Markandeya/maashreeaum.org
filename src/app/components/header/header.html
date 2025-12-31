@@ -9,16 +9,18 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse" id="navbarNav" #navbarCollapse>
       <ul class="navbar-nav mx-auto align-items-center gap-lg-4">
         <li class="nav-item">
-          <a class="nav-link px-0 text-center" routerLink="/maashree" routerLinkActive="active">SHREE GURU MAASHREE</a>
+          <a class="nav-link px-0 text-center" routerLink="/maashree" routerLinkActive="active"
+            (click)="closeMenu()">SHREE GURU MAASHREE</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-0 text-center" href="#">UTTARANN</a>
+          <a class="nav-link px-0 text-center" href="#" (click)="closeMenu()">UTTARANN</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-0 text-center" routerLink="/shreeja-ashram" routerLinkActive="active">SHREEJAASHRAM</a>
+          <a class="nav-link px-0 text-center" routerLink="/shreeja-ashram" routerLinkActive="active"
+            (click)="closeMenu()">SHREEJAASHRAM</a>
         </li>
         <li class="nav-item dropdown" routerLinkActive="active">
           <a class="nav-link dropdown-toggle px-0 text-center" href="#" id="projectsDropdown" role="button"
@@ -26,25 +28,29 @@
             ACTIVITIES
           </a>
           <ul class="dropdown-menu border-0 shadow-sm">
-            <li><a class="dropdown-item" href="#">Ashram Initiatives</a></li>
-            <li><a class="dropdown-item" routerLink="/karmayog/stand-for-animals" routerLinkActive="active">Stand For
+            <li><a class="dropdown-item" href="#" (click)="closeMenu()">Ashram Initiatives</a></li>
+            <li><a class="dropdown-item" routerLink="/karmayog/stand-for-animals" routerLinkActive="active"
+                (click)="closeMenu()">Stand For
                 Animals</a></li>
-            <li><a class="dropdown-item" routerLink="/karmayog/bhavasana" routerLinkActive="active">Bhavasana</a></li>
-            <li><a class="dropdown-item" href="#">Guru Sannidhya & Retreats</a></li>
-            <li><a class="dropdown-item" routerLink="/karmayog/shree-guru-vidyalaya" routerLinkActive="active">Shree
+            <li><a class="dropdown-item" routerLink="/karmayog/bhavasana" routerLinkActive="active"
+                (click)="closeMenu()">Bhavasana</a></li>
+            <li><a class="dropdown-item" href="#" (click)="closeMenu()">Guru Sannidhya & Retreats</a></li>
+            <li><a class="dropdown-item" routerLink="/karmayog/shree-guru-vidyalaya" routerLinkActive="active"
+                (click)="closeMenu()">Shree
                 Guru Vidyalaya</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-0 text-center" routerLink="/newsletters" routerLinkActive="active">NEWSLETTERS</a>
+          <a class="nav-link px-0 text-center" routerLink="/newsletters" routerLinkActive="active"
+            (click)="closeMenu()">NEWSLETTERS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link px-0 text-center" href="https://publicationsmaashreeaum.org/home"
-            target="_blank">PUBLICATIONS</a>
+          <a class="nav-link px-0 text-center" href="https://publicationsmaashreeaum.org/home" target="_blank"
+            (click)="closeMenu()">PUBLICATIONS</a>
         </li>
       </ul>
       <div class="d-flex ms-lg-auto">
-        <a routerLink="/donate" class="btn btn-dark px-4 py-2">DONATE</a>
+        <a routerLink="/donate" class="btn btn-dark px-4 py-2" (click)="closeMenu()">DONATE</a>
       </div>
     </div>
   </div>

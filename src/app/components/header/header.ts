@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterModule } from '@angular/router';
+
+declare var bootstrap: any;
 
 @Component({
   selector: 'app-header',
@@ -9,5 +11,12 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.scss',
 })
 export class Header {
+  @ViewChild('navbarCollapse') navbarCollapse!: ElementRef;
 
+  closeMenu() {
+    if (this.navbarCollapse.nativeElement.classList.contains('show')) {
+      const bsCollapse = bootstrap.Collapse.getOrCreateInstance(this.navbarCollapse.nativeElement);
+      bsCollapse.hide();
+    }
+  }
 }
