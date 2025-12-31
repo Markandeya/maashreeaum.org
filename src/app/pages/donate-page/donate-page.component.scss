@@ -1,0 +1,195 @@
+.donate-page-container {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+// Hero Section
+.hero-section {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+        url('/donate-bg.jpg'); // Using the downloaded background image
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+    .subtitle {
+        font-size: 0.9rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-weight: 600;
+        opacity: 0.9;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+        font-weight: 300;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+        font-weight: 300;
+        font-style: italic;
+        opacity: 0.9;
+    }
+}
+
+// Info Section
+.info-section {
+    padding: 5rem 0;
+    background-color: #fffbf0;
+
+    .rose-icon {
+        opacity: 0.8;
+    }
+
+    .section-title {
+        color: #2e5c46;
+        font-size: 2.5rem;
+        font-weight: 400;
+    }
+
+    .lead {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #555;
+    }
+}
+
+// Form Section
+.donation-form-section {
+    padding: 5rem 0;
+    background-color: #f9f9f9;
+
+    .donation-card {
+        background: #fff;
+        padding: 3rem;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-title {
+        color: #333;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+
+    .section-label {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color: #2e5c46;
+        font-weight: 700;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 0.5rem;
+    }
+
+    .form-label {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .form-control,
+    .form-select {
+        border-radius: 0;
+        padding: 0.8rem 1rem;
+        border: 1px solid #ddd;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+
+        &:focus {
+            border-color: #2e5c46;
+            box-shadow: none;
+        }
+    }
+
+    .amount-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .amount-btn {
+        border-radius: 0;
+        padding: 1rem;
+        font-weight: 600;
+        border-color: #ddd;
+        color: #555;
+        background: #fff;
+
+        &:hover,
+        &.active {
+            background-color: #2e5c46;
+            border-color: #2e5c46;
+            color: white;
+        }
+    }
+
+    .type-btn {
+        border-radius: 0;
+        padding: 0.8rem 1rem;
+        font-weight: 600;
+        border-color: #ddd; // Default border
+        color: #555;
+        background: #fff;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: #2e5c46;
+            border-color: #2e5c46;
+            color: white;
+        }
+    }
+
+    // Target the label when the associated radio is checked
+    .btn-check:checked+.type-btn {
+        background-color: #2e5c46;
+        border-color: #2e5c46;
+        color: white;
+    }
+
+    .btn-primary {
+        background-color: #d4a574;
+        border-color: #d4a574;
+        border-radius: 0;
+        padding: 1rem 3rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: #c49464;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 165, 116, 0.4);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .amount-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-section {
+        .hero-title {
+            font-size: 2.5rem;
+        }
+    }
+
+    .donation-form-section {
+        .donation-card {
+            padding: 1.5rem;
+        }
+    }
+}

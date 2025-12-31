@@ -1,0 +1,160 @@
+<div class="donate-page-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay">
+            <h6 class="subtitle mb-3 text-white">Daanam</h6>
+            <h1 class="hero-title text-white">Donate to Uttarann</h1>
+            <p class="hero-subtitle">In Service of the Divine</p>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="info-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h2 class="section-title mb-4">Support Our Mission</h2>
+                    <p class="lead mb-4">
+                        With the support of our donors, Uttarann carries out initiatives like Tribal Welfare Programs in
+                        rural Maharashtra and Stand For Animals in major cities of India. At Shreejaashram, we host
+                        meditation retreats, celebrate important pujas and conduct annual yajnas (Purnahati and Ama
+                        Usha) in the Grace and Guidance of Shree Guru Maashree.
+                    </p>
+                    <p class="lead mb-4">
+                        Shreejaashram Charitable Trust ensures all funds are utilized transparently and effectively for
+                        its projects. Maashree's discourses and publications are accessible through the Shree Aum
+                        Website. </p>
+                    <p class="text-muted mb-5">
+                        All donations are tax exempt from Income Tax U/S 80 G of the IT Act.
+                        <br>
+                        <small>Shreejaashram Charitable Trust ensures all funds are utilized transparently and
+                            effectively for its projects.</small>
+                    </p>
+                    <img src="/donate-rose.png" alt="Decorative Rose" class="rose-icon mb-4" width="60">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Form Section -->
+    <section class="donation-form-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="donation-card">
+                        <h3 class="form-title text-center mb-5">Make a Donation</h3>
+
+                        <form (ngSubmit)="onSubmit()" #dForm="ngForm">
+                            <!-- Donation Type -->
+                            <h5 class="section-label mb-4">Select Donation Type</h5>
+                            <div class="mb-5">
+                                <div class="btn-group w-100" role="group">
+                                    <input type="radio" class="btn-check" name="donationType" id="generalDonation"
+                                        value="General Donation" [(ngModel)]="donationForm.donationType">
+                                    <label class="btn type-btn" for="generalDonation">General
+                                        Donation</label>
+
+                                    <input type="radio" class="btn-check" name="donationType" id="corpusDonation"
+                                        value="Corpus Donation" [(ngModel)]="donationForm.donationType">
+                                    <label class="btn type-btn" for="corpusDonation">Corpus Donation</label>
+                                </div>
+                            </div>
+
+                            <!-- Personal Information -->
+                            <h5 class="section-label mb-4">Personal Information</h5>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label">First Name</label>
+                                    <input type="text" class="form-control" [(ngModel)]="donationForm.firstName"
+                                        name="firstName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" [(ngModel)]="donationForm.lastName"
+                                        name="lastName" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" [(ngModel)]="donationForm.email"
+                                        name="email" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" [(ngModel)]="donationForm.phone" name="phone"
+                                        required>
+                                </div>
+                            </div>
+
+                            <!-- Identification -->
+                            <h5 class="section-label mb-4">Identification (For Tax Exemption)</h5>
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label">ID Type</label>
+                                    <select class="form-select" [(ngModel)]="donationForm.idType" name="idType">
+                                        <option *ngFor="let type of idTypes" [value]="type">{{ type }}</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">ID Number</label>
+                                    <input type="text" class="form-control" [(ngModel)]="donationForm.idNumber"
+                                        name="idNumber" required>
+                                </div>
+                            </div>
+
+                            <!-- Amount Selection -->
+                            <h5 class="section-label mb-4">Select Amount to Donate (INR)</h5>
+                            <div class="amount-grid mb-4">
+                                <button type="button" *ngFor="let amt of donationAmounts"
+                                    class="btn btn-outline-primary amount-btn"
+                                    [class.active]="donationForm.amount === amt && !donationForm.customAmount"
+                                    (click)="setAmount(amt)">
+                                    ₹ {{ amt }}
+                                </button>
+                            </div>
+
+                            <div class="mb-5">
+                                <label class="form-label">Or Enter Custom Amount</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">₹</span>
+                                    <input type="number" class="form-control" [(ngModel)]="donationForm.customAmount"
+                                        (input)="donationForm.amount = donationForm.customAmount" name="customAmount"
+                                        placeholder="Enter amount">
+                                </div>
+                            </div>
+
+                            <div class="mb-5">
+                                <label class="form-label">Message (Optional)</label>
+                                <textarea class="form-control" rows="3" [(ngModel)]="donationForm.message"
+                                    name="message"></textarea>
+                            </div>
+
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" [(ngModel)]="donationForm.termsAccepted"
+                                    name="termsAccepted" id="termsAccepted" required>
+                                <label class="form-check-label small text-muted" for="termsAccepted">
+                                    I hereby accept the terms and conditions of Shreejaashram Charitable Trust for
+                                    donations and clearly understand that there will be NO REFUND of donations or any
+                                    cancellations.
+                                </label>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg px-5">Proceed to Donate</button>
+                                <p class="mt-3 text-muted small">
+                                    By clicking proceed, I accept the terms and conditions. <br>
+                                    Note: We currently cannot accept donations from overseas banks.
+                                </p>
+                                <p class="mt-4 text-dark fw-medium small">
+                                    For all receipts or any assistance, please contact us at <a
+                                        href="mailto:uttarannofmaashree@gmail.com"
+                                        class="text-decoration-none">uttarannofmaashree@gmail.com</a>.
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
