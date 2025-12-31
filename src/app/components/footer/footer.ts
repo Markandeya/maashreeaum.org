@@ -35,7 +35,8 @@ export class Footer {
       const templateParams = {
         name: this.contactName,
         email: this.contactEmail,
-        message: this.contactMessage,
+        reply_to: this.contactEmail,
+        message: `From: ${this.contactEmail}\n\n${this.contactMessage}`,
       };
 
       console.log('Calling emailjs.send');
@@ -69,13 +70,27 @@ export class Footer {
     }
   }
 
+  private toastTimeout: any;
+
+  public closeToast() {
+    this.showToast = false;
+    if (this.toastTimeout) {
+      clearTimeout(this.toastTimeout);
+    }
+  }
+
   private showToastNotification(message: string, type: 'success' | 'error') {
     this.toastMessage = message;
     this.toastType = type;
     this.showToast = true;
 
-    setTimeout(() => {
+    if (this.toastTimeout) {
+      clearTimeout(this.toastTimeout);
+    }
+
+    this.toastTimeout = setTimeout(() => {
       this.showToast = false;
-    }, 3000);
+      this.cdr.detectChanges();
+    }, 5000); // 5 seconds duration
   }
 }
