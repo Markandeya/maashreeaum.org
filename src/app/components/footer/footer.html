@@ -43,19 +43,24 @@
       <div class="col-lg-6">
         <div class="contact-form-wrapper">
           <h3 class="contact-form-title mb-4">CONTACT US</h3>
-          <form class="contact-form">
+          <form class="contact-form" (ngSubmit)="sendEmail()" #contactForm="ngForm">
             <div class="row g-3">
               <div class="col-md-6">
-                <input type="text" class="form-control" placeholder="Your Name" required>
+                <input type="text" class="form-control" name="name" [(ngModel)]="contactName" placeholder="Your Name"
+                  required>
               </div>
               <div class="col-md-6">
-                <input type="email" class="form-control" placeholder="Your Email" required>
+                <input type="email" class="form-control" name="email" [(ngModel)]="contactEmail"
+                  placeholder="Your Email" required>
               </div>
               <div class="col-12">
-                <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                <textarea class="form-control" name="message" rows="4" [(ngModel)]="contactMessage"
+                  placeholder="Your Message" required></textarea>
               </div>
               <div class="col-12">
-                <button type="submit" class="btn btn-primary w-100 py-3">SEND MESSAGE</button>
+                <button type="submit" class="btn btn-primary w-100 py-3" [disabled]="isSubmitting">
+                  {{ isSubmitting ? 'SENDING...' : 'SEND MESSAGE' }}
+                </button>
               </div>
             </div>
           </form>
@@ -78,4 +83,9 @@
       </div>
     </div>
   </div>
+
 </footer>
+
+<div class="toast-notification" *ngIf="showToast" [ngClass]="toastType">
+  {{ toastMessage }}
+</div>
