@@ -22,5 +22,6 @@ import { Activities } from '../../components/activities/activities';
 
     ],
     templateUrl: './landing-page.html',
+    styleUrl: './landing-page.scss',
 })
 export class LandingPage { }

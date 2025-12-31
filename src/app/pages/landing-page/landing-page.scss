@@ -1,0 +1,16 @@
+.connected-sections {
+    background-color: #e8e4dc;
+}
+
+.section-divider {
+    width: 70%;
+    max-width: 700px;
+    height: 4px;
+    /* Complementing bronze/gold tone that fades out */
+    background: linear-gradient(90deg, transparent 0%, rgba(166, 124, 82, 0.2) 15%, rgba(166, 124, 82, 0.8) 50%, rgba(166, 124, 82, 0.2) 85%, transparent 100%);
+    margin: 3rem auto;
+    border-radius: 100%;
+    /* Creates the tapered "thicker in center" shape */
+    opacity: 0.9;
+    border: none;
+}
