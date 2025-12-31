@@ -2,7 +2,7 @@
   <div class="container-fluid px-lg-5 py-2">
     <!-- Logo -->
     <a class="navbar-brand py-2" href="#">
-      <img src="logo.png" alt="Maashreeaum Logo" style="height: 55px; width: auto;">
+      <img src="/logo.png" alt="Maashreeaum Logo" style="height: 55px; width: auto;">
     </a>
 
     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -15,9 +15,7 @@
           <a class="nav-link px-0 text-center" routerLink="/maashree" routerLinkActive="active"
             (click)="closeMenu()">SHREE GURU MAASHREE</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link px-0 text-center" href="#" (click)="closeMenu()">UTTARANN</a>
-        </li>
+
         <li class="nav-item">
           <a class="nav-link px-0 text-center" routerLink="/shreeja-ashram" routerLinkActive="active"
             (click)="closeMenu()">SHREEJAASHRAM</a>
@@ -28,13 +26,13 @@
             PROJECTS
           </a>
           <ul class="dropdown-menu border-0 shadow-sm">
-            <li><a class="dropdown-item" href="#" (click)="closeMenu()">Ashram Initiatives</a></li>
+            <li><a class="dropdown-item" routerLink="/donate" (click)="closeMenu()">Ashram Initiatives</a></li>
             <li><a class="dropdown-item" routerLink="/karmayog/stand-for-animals" routerLinkActive="active"
                 (click)="closeMenu()">Stand For
                 Animals</a></li>
             <li><a class="dropdown-item" routerLink="/karmayog/bhavasana" routerLinkActive="active"
                 (click)="closeMenu()">Bhavasana</a></li>
-            <li><a class="dropdown-item" href="#" (click)="closeMenu()">Guru Sannidhya & Retreats</a></li>
+
             <li><a class="dropdown-item" routerLink="/karmayog/shree-guru-vidyalaya" routerLinkActive="active"
                 (click)="closeMenu()">Shree
                 Guru Vidyalaya</a></li>
