@@ -110,7 +110,14 @@
         box-shadow: none;
         background-color: #f8f9fa;
         margin-top: 0;
-        padding-left: 1rem;
+        min-width: 0;
+        width: 100%;
+        padding: 0.5rem 0;
+    }
+
+    .dropdown-item {
+        padding-left: 1.5rem;
+        white-space: normal; // Allow text wrapping on standard mobile
     }
 
     .btn-dark {
