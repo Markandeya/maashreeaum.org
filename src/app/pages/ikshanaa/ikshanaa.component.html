@@ -1,0 +1,166 @@
+<div class="ikshanaa-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay">
+            <h1 class="text-center text-white">iKSHANAA</h1>
+            <p class="text-center text-white mt-2">The way to see your SELF</p>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="info-section">
+        <div class="container">
+            <div class="row">
+                <!-- Text Content (Left Column) -->
+                <div class="col-lg-6 mb-5 mb-lg-0 pe-lg-5">
+                    <h6 class="subtitle mb-3">iKSHANAA</h6>
+                    <h2 class="section-title mb-4">Discover Your True Self</h2>
+                    <p class="lead mb-4">
+                        You have worked hard this year. Achieved your targets at work. Supported your child's dreams,
+                        given quality life to your family.
+                        <br />
+                        What about your SELF?
+                    </p>
+                    <p class="mb-4">
+                        <strong class="highlight">iKSHANAA</strong> is the way to see your SELF. It is a 3 days - 3
+                        nights in-person programme to learn Applied Spirituality in everyday life. You can discover how
+                        to quiet the constant chatter of thoughts and worries in your mind. Thus, learning the secret to
+                        be free of anxiety and reduce stress in your everyday life.
+                    </p>
+
+                    <div class="highlights mb-4">
+                        <h5 class="mb-3">Programme Highlights</h5>
+                        <ul class="list-unstyled">
+                            <li>• Bhavasan and Meditation sessions</li>
+                            <li>• Introspection and Self-reflection</li>
+                            <li>• Simple methods to integrate spirituality into everyday life</li>
+                            <li>• A nurturing environment to explore your true self</li>
+                        </ul>
+                    </div>
+
+                    <div class="details-box p-4 rounded mb-4">
+                        <div class="d-flex align-items-center mb-2">
+                            <i class="bi bi-geo-alt-fill me-2 text-danger"></i>
+                            <strong>Venue:</strong>&nbsp;Shreejaashram, Khodala, Maharashtra
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-calendar-event-fill me-2 text-danger"></i>
+                            <strong>Dates:</strong>&nbsp;18th - 21st February 2026
+                        </div>
+                        <p class="mt-3 text-muted small">
+                            For further details on enrollment, write to us at <a
+                                href="mailto:uttarannofmaashree@gmail.com">uttarannofmaashree@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Registration Form (Right Column) -->
+                <div class="col-lg-6">
+                    <div class="card shadow-sm border-0 bg-light">
+                        <div class="card-body p-4">
+                            <h3 class="section-title text-center mb-4" style="font-size: 1.8rem;">Register Now</h3>
+
+                            <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+                                <div class="row g-3">
+                                    <!-- Name -->
+                                    <div class="col-12">
+                                        <label for="name" class="form-label">Full Name <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="name" formControlName="name"
+                                            [class.is-invalid]="f['name'].touched && f['name'].invalid">
+                                        <div class="invalid-feedback" *ngIf="f['name'].errors?.['required']">
+                                            Name is required
+                                        </div>
+                                    </div>
+
+                                    <!-- Age & Gender -->
+                                    <div class="col-md-6">
+                                        <label for="age" class="form-label">Age <span
+                                                class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" id="age" formControlName="age"
+                                            [class.is-invalid]="f['age'].touched && f['age'].invalid">
+                                        <div class="invalid-feedback">Age is required</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="gender" class="form-label">Gender <span
+                                                class="text-danger">*</span></label>
+                                        <select class="form-select" id="gender" formControlName="gender"
+                                            [class.is-invalid]="f['gender'].touched && f['gender'].invalid">
+                                            <option value="">Select Gender</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        <div class="invalid-feedback">Gender is required</div>
+                                    </div>
+
+                                    <!-- Validated Contact Info -->
+                                    <div class="col-12">
+                                        <label for="email" class="form-label">Email <span
+                                                class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" id="email" formControlName="email"
+                                            [class.is-invalid]="f['email'].touched && f['email'].invalid">
+                                        <div class="invalid-feedback" *ngIf="f['email'].errors?.['required']">Email is
+                                            required</div>
+                                        <div class="invalid-feedback" *ngIf="f['email'].errors?.['email']">Please enter
+                                            a valid email</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="phone" class="form-label">Phone <span
+                                                class="text-danger">*</span></label>
+                                        <input type="tel" class="form-control" id="phone" formControlName="phone"
+                                            [class.is-invalid]="f['phone'].touched && f['phone'].invalid">
+                                        <div class="invalid-feedback">Phone is required</div>
+                                    </div>
+
+                                    <!-- Location -->
+                                    <div class="col-12">
+                                        <label for="location" class="form-label">Location (City, State) <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="location" formControlName="location"
+                                            [class.is-invalid]="f['location'].touched && f['location'].invalid">
+                                        <div class="invalid-feedback">Location is required</div>
+                                    </div>
+
+                                    <!-- Expectations -->
+                                    <div class="col-12">
+                                        <label for="expectations" class="form-label">What do you hope to gain from
+                                            this?</label>
+                                        <textarea class="form-control" id="expectations" rows="3"
+                                            formControlName="expectations"></textarea>
+                                    </div>
+
+                                    <!-- Physical Ailments -->
+                                    <div class="col-12">
+                                        <label for="ailments" class="form-label">Physical Ailments (Optional)</label>
+                                        <textarea class="form-control" id="ailments" rows="2" formControlName="ailments"
+                                            placeholder="Any physical issues we should be aware of?"></textarea>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <div class="col-12 mt-4">
+                                        <button type="submit" class="btn btn-primary w-100 py-3"
+                                            [disabled]="isSubmitting">
+                                            <span *ngIf="!isSubmitting">REGISTER NOW</span>
+                                            <span *ngIf="isSubmitting" class="spinner-border spinner-border-sm me-2"
+                                                role="status" aria-hidden="true"></span>
+                                            <span *ngIf="isSubmitting">Processing...</span>
+                                        </button>
+                                    </div>
+
+                                    <!-- Status Messages -->
+                                    <div class="col-12" *ngIf="submitStatus">
+                                        <div class="alert"
+                                            [ngClass]="{'alert-success': submitStatus === 'success', 'alert-danger': submitStatus === 'error'}">
+                                            {{ statusMessage }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

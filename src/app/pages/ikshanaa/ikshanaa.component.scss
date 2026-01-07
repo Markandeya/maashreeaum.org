@@ -1,0 +1,173 @@
+.ikshanaa-container {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+// Hero Section
+.hero-section {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    // Using shreejaashram image as it is the venue, provides good spiritual context
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+        url('/ikshanaa-header.jpg');
+    background-size: cover, cover;
+    background-position: center, center bottom -30px;
+    background-repeat: no-repeat, no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .hero-overlay {
+        padding: 2rem;
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+
+// Common Typography
+.subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #888;
+    font-weight: 600;
+}
+
+.section-title {
+    color: #2e5c46;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.highlight {
+    color: #d4a574;
+}
+
+// Info Section
+.info-section {
+    padding: 5rem 0;
+    background: #fff;
+
+    .flyer-img {
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+
+    .lead {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #555;
+    }
+
+    .highlights {
+        background: #fdfdfd;
+        padding: 1.5rem;
+        border-left: 4px solid #d4a574;
+
+        li {
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+            color: #444;
+        }
+    }
+
+    .details-box {
+        background-color: #f9fdfa;
+        border: 1px solid #eef5f2;
+    }
+}
+
+// Registration Section
+.registration-section {
+    padding: 5rem 0;
+    background: #f5f5f5;
+
+    .card {
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .form-label {
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        color: #555;
+        margin-bottom: 0.5rem;
+    }
+
+    .form-control,
+    .form-select {
+        padding: 0.75rem 1rem;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        transition: all 0.2s;
+
+        &:focus {
+            border-color: #2e5c46;
+            box-shadow: 0 0 0 3px rgba(46, 92, 70, 0.1);
+        }
+    }
+
+    .btn-primary {
+        background-color: #2e5c46;
+        border-color: #2e5c46;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        transition: all 0.3s;
+
+        &:hover:not([disabled]) {
+            background-color: #244a38;
+            border-color: #244a38;
+            transform: translateY(-2px);
+        }
+
+        &:disabled {
+            background-color: #7a9689;
+            border-color: #7a9689;
+            cursor: not-allowed;
+        }
+    }
+}
+
+// Mobile Responsiveness
+@media (max-width: 768px) {
+    .hero-section {
+        height: 50vh;
+
+        .hero-overlay h1 {
+            font-size: 2.5rem;
+        }
+    }
+
+    .info-section,
+    .registration-section {
+        padding: 3rem 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
