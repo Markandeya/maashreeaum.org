@@ -59,6 +59,40 @@
     font-weight: 600;
 }
 
+.text-green {
+    color: #2e5c46 !important;
+}
+
+.bg-green {
+    background-color: #2e5c46 !important;
+}
+
+// CTA Button - Elegant Green with Gold accent
+// Flows matches the page theme (Green) but the Gold border adds a premium touch to attract clicks
+.btn-cta {
+    background-color: #2e5c46;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    font-weight: 700;
+
+    &:hover {
+        background-color: #d4a574;
+        border-color: #d4a574;
+        color: #2e5c46;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(46, 92, 70, 0.3);
+    }
+
+    &:disabled {
+        background-color: #7a9689;
+        border-color: #7a9689;
+        color: #e0e0e0;
+        cursor: not-allowed;
+        box-shadow: none;
+        transform: none;
+    }
+}
+
 
 // Info Section
 // Info Section
@@ -166,5 +200,15 @@
 
     .section-title {
         font-size: 2rem;
+    }
+
+    .highlights-section {
+        .lead {
+            font-size: 1rem !important; // Standard size for mobile readability
+        }
+
+        i {
+            font-size: 1.25rem !important; // Smaller icons to match text
+        }
     }
 }
