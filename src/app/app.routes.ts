@@ -11,6 +11,7 @@ import { StandForAnimalsComponent } from './pages/karmayog/stand-for-animals-pag
 import { BhavasanaComponent } from './pages/karmayog/bhavasana-page/bhavasana.component';
 import { ShreeGuruVidyalayaComponent } from './pages/karmayog/shree-guru-vidyalaya-page/shree-guru-vidyalaya.component';
 import { IkshanaaComponent } from './pages/ikshanaa/ikshanaa.component';
+import { WipComponent } from './pages/wip/wip.component';
 
 export const routes: Routes = [
     { path: '', component: LandingPage },
@@ -24,6 +25,7 @@ export const routes: Routes = [
     { path: 'karmayog/shree-guru-vidyalaya', component: ShreeGuruVidyalayaComponent },
     { path: 'ikshanaa', component: IkshanaaComponent },
     { path: 'privacy-policy', component: PrivacyPolicyComponent },
+    { path: 'wip', component: WipComponent },
     { path: '404', component: NotFoundComponent },
     { path: '**', component: NotFoundComponent }
 ];

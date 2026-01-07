@@ -1,0 +1,28 @@
+.wip-container {
+    min-height: 80vh;
+    background-color: #f9fdfa; // Very light green tint background
+}
+
+.text-gold {
+    color: #d4a574;
+}
+
+.text-green {
+    color: #2e5c46;
+}
+
+.letter-spacing-1 {
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background-color: #2e5c46;
+    border-color: #2e5c46;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: #244a38;
+        border-color: #244a38;
+        transform: translateY(-2px);
+    }
+}
