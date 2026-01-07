@@ -1,65 +1,210 @@
 <div class="ikshanaa-container">
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="hero-overlay">
-            <h1 class="text-center text-white">iKSHANAA</h1>
-            <p class="text-center text-white mt-2">The way to see your SELF</p>
+        <div class="hero-overlay text-center text-white">
+            <h1 class="mb-2">iKSHANAA</h1>
+            <h4 class="fw-light letter-spacing-2 mb-4">Residential Programme</h4>
+            <p class="lead mb-4">See your true self</p>
+            <button class="btn btn-outline-light px-5 py-3 rounded-pill letter-spacing-2 fw-bold"
+                (click)="scrollToRegister()">REGISTER NOW</button>
         </div>
     </section>
 
-    <!-- Content Section -->
-    <section class="info-section">
-        <div class="container">
-            <div class="row">
-                <!-- Text Content (Left Column) -->
-                <div class="col-lg-6 mb-5 mb-lg-0 pe-lg-5">
-                    <h6 class="subtitle mb-3">iKSHANAA</h6>
-                    <h2 class="section-title mb-4">Discover Your True Self</h2>
-                    <p class="lead mb-4">
-                        You have worked hard this year. Achieved your targets at work. Supported your child's dreams,
-                        given quality life to your family.
-                        <br />
-                        What about your SELF?
+    <!-- Overview Section -->
+    <section class="py-5 bg-white">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <h6 class="subtitle mb-3 text-warning">OVERVIEW</h6>
+                    <h2 class="section-title mb-4">What is iKshanaa?</h2>
+                    <p class="lead text-muted mb-4">
+                        In a world that moves faster than ever, we often lose touch with our center — pulled between
+                        responsibilities, ambitions, expectations, and an unending stream of noise.
                     </p>
                     <p class="mb-4">
-                        <strong class="highlight">iKSHANAA</strong> is the way to see your SELF. It is a 3 days - 3
-                        nights in-person programme to learn Applied Spirituality in everyday life. You can discover how
-                        to quiet the constant chatter of thoughts and worries in your mind. Thus, learning the secret to
-                        be free of anxiety and reduce stress in your everyday life.
+                        Yet beneath all of this, there remains a quiet call within each of us: to pause, to re-align,
+                        and to truly listen to ourself with clarity, and inner steadiness.
                     </p>
+                    <p>
+                        <strong class="highlight">iKshanaa</strong>, a 3-day 3-night residential retreat at the serene
+                        and blessed <strong class="text-dark">Shreejaashram, Khodala</strong>, is an offering to help
+                        rediscover that inner compass, our True North. Set amidst the silence of nature, this retreat
+                        invites you to step away from the external rush and gently turn inward.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="highlights mb-4">
-                        <h5 class="mb-3">Programme Highlights</h5>
-                        <ul class="list-unstyled">
-                            <li>• Bhavasan and Meditation sessions</li>
-                            <li>• Introspection and Self-reflection</li>
-                            <li>• Simple methods to integrate spirituality into everyday life</li>
-                            <li>• A nurturing environment to explore your true self</li>
-                        </ul>
-                    </div>
-
-                    <div class="details-box p-4 rounded mb-4">
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="bi bi-geo-alt-fill me-2 text-danger"></i>
-                            <strong>Venue:</strong>&nbsp;Shreejaashram, Khodala, Maharashtra
+    <!-- Offers Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">What iKshanaa Offers</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <div class="card-body text-center">
+                            <i class="bi bi-flower1 text-success fs-1 mb-3"></i>
+                            <h5 class="card-title text-success mb-3">A deeper understanding of your inner landscape</h5>
+                            <p class="card-text text-muted small">Explore the emotional, mental, and psychological
+                                pressures of modern living — and learn how they silently shape your choices.</p>
                         </div>
-                        <div class="d-flex align-items-center">
-                            <i class="bi bi-calendar-event-fill me-2 text-danger"></i>
-                            <strong>Dates:</strong>&nbsp;18th - 21st February 2026
-                        </div>
-                        <p class="mt-3 text-muted small">
-                            For further details on enrollment, write to us at <a
-                                href="mailto:uttarannofmaashree@gmail.com">uttarannofmaashree@gmail.com</a>
-                        </p>
                     </div>
                 </div>
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <div class="card-body text-center">
+                            <i class="bi bi-water text-success fs-1 mb-3"></i>
+                            <h5 class="card-title text-success mb-3">Movement from restlessness to mindfulness</h5>
+                            <p class="card-text text-muted small">Shift from distraction to focus, from noise to
+                                clarity, from emotional turbulence to inner ease.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <div class="card-body text-center">
+                            <i class="bi bi-yin-yang text-success fs-1 mb-3"></i>
+                            <h5 class="card-title text-success mb-3">Practical tools for inner peace</h5>
+                            <p class="card-text text-muted small">Simple yet powerful techniques rooted in traditional
+                                wisdom, designed to bring you back to balance in everyday life.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm p-4">
+                        <div class="card-body text-center">
+                            <i class="bi bi-compass text-success fs-1 mb-3"></i>
+                            <h5 class="card-title text-success mb-3">Seeing your own life path clearly</h5>
+                            <p class="card-text text-muted small">Recognize your patterns, your strengths, your
+                                resistances — and the deeper direction your life is inviting you toward.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Registration Form (Right Column) -->
+    <!-- Who Should Attend & Outcomes -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row g-5 align-items-start">
+                <!-- Who Should Attend -->
                 <div class="col-lg-6">
-                    <div class="card shadow-sm border-0 bg-light">
-                        <div class="card-body p-4">
-                            <h3 class="section-title text-center mb-4" style="font-size: 1.8rem;">Register Now</h3>
+                    <h3 class="h4 mb-4 text-dark border-bottom pb-2 d-inline-block">Who Should Attend?</h3>
+                    <div class="mb-4">
+                        <h6 class="fw-bold text-dark mb-3">Young Minds</h6>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill me-2 text-warning"></i>Seeking clarity
+                                and purpose</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill me-2 text-warning"></i>Navigating
+                                choices, identity, and pressure</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill me-2 text-warning"></i>Yearning for
+                                stronger inner grounding</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h6 class="fw-bold text-dark mb-3">Older Participants</h6>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-2"><i class="bi bi-check-circle-fill me-2 text-warning"></i>Looking for deeper
+                                reflection</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill me-2 text-warning"></i>Seeking renewal
+                                after years of responsibilities</li>
+                            <li class="mb-2"><i class="bi bi-check-circle-fill me-2 text-warning"></i>Wanting peace,
+                                simplicity, and inner anchoring</li>
+                        </ul>
+                    </div>
+                    <p class="mt-4 pt-3 border-top small text-secondary fst-italic">
+                        This retreat is relevant to any working professional or householder who feels the world has
+                        become too loud, and wishes to return to silence, sincerity, and inner direction.
+                    </p>
+                </div>
 
+                <!-- Taking Back -->
+                <div class="col-lg-6">
+                    <div class="bg-light p-4 rounded-3 h-100">
+                        <h3 class="h4 mb-4 text-dark">What You Will Take Back</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-star-fill text-warning me-3 mt-1"></i>
+                                <span>Renewed inner steadiness</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-star-fill text-warning me-3 mt-1"></i>
+                                <span>A clearer understanding of life’s challenges</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-star-fill text-warning me-3 mt-1"></i>
+                                <span>Mindful tools to navigate stress and uncertainty</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-star-fill text-warning me-3 mt-1"></i>
+                                <span>A strengthened inner compass</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-star-fill text-warning me-3 mt-1"></i>
+                                <span>Ability to prioritize what truly matters</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-star-fill text-warning me-3 mt-1"></i>
+                                <span>A sense of expansion and spaciousness within</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-star-fill text-warning me-3 mt-1"></i>
+                                <span>A deeper connection to your own path and purpose</span>
+                            </li>
+                        </ul>
+                        <div class="text-center mt-4">
+                            <p class="fw-bold text-success fst-italic">
+                                "Most importantly, you will return with an inner quiet — a space you can revisit
+                                anytime, anywhere."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venue Strip -->
+    <section class="py-5 bg-dark text-white">
+        <div class="container text-center">
+            <h6 class="text-uppercase text-warning letter-spacing-2 mb-4">Retreat Details</h6>
+            <div class="row justify-content-center g-5">
+                <div class="col-md-4">
+                    <i class="bi bi-geo-alt fs-2 mb-3 d-block text-warning"></i>
+                    <h5 class="mb-1">VENUE</h5>
+                    <p class="mb-0 text-white-50">Shreejaashram, Khodala</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-calendar-event fs-2 mb-3 d-block text-warning"></i>
+                    <h5 class="mb-1">DATES</h5>
+                    <p class="mb-0 text-white-50">20th–23rd February 2026</p>
+                    <small class="text-white-50">3 Days & 3 Nights</small>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-envelope fs-2 mb-3 d-block text-warning"></i>
+                    <h5 class="mb-1">CONTACT</h5>
+                    <p class="mb-0"><a href="mailto:uttarannofmaashree@gmail.com"
+                            class="text-white-50 text-decoration-none">uttarannofmaashree@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="py-5 bg-light" id="register">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow border-0 overflow-hidden">
+                        <div class="card-header bg-success text-white text-center py-4">
+                            <h3 class="mb-0">Ready to Discover Your True Self?</h3>
+                            <p class="mb-0 mt-2 text-white-50">Fill out the form below to register</p>
+                        </div>
+                        <div class="card-body p-4 p-md-5">
                             <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
                                 <div class="row g-3">
                                     <!-- Name -->
@@ -95,7 +240,7 @@
                                     </div>
 
                                     <!-- Validated Contact Info -->
-                                    <div class="col-12">
+                                    <div class="col-md-6">
                                         <label for="email" class="form-label">Email <span
                                                 class="text-danger">*</span></label>
                                         <input type="email" class="form-control" id="email" formControlName="email"
@@ -105,7 +250,7 @@
                                         <div class="invalid-feedback" *ngIf="f['email'].errors?.['email']">Please enter
                                             a valid email</div>
                                     </div>
-                                    <div class="col-12">
+                                    <div class="col-md-6">
                                         <label for="phone" class="form-label">Phone <span
                                                 class="text-danger">*</span></label>
                                         <input type="tel" class="form-control" id="phone" formControlName="phone"
@@ -139,8 +284,10 @@
 
                                     <!-- Submit Button -->
                                     <div class="col-12 mt-4">
-                                        <button type="submit" class="btn btn-primary w-100 py-3"
-                                            [disabled]="isSubmitting">
+                                        <button type="submit"
+                                            class="btn btn-success w-100 py-3 fw-bold letter-spacing-1"
+                                            [disabled]="isSubmitting"
+                                            style="background-color: #2e5c46; border-color: #2e5c46;">
                                             <span *ngIf="!isSubmitting">REGISTER NOW</span>
                                             <span *ngIf="isSubmitting" class="spinner-border spinner-border-sm me-2"
                                                 role="status" aria-hidden="true"></span>

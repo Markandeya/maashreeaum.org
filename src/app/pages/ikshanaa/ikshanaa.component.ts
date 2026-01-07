@@ -101,4 +101,11 @@ export class IkshanaaComponent {
             });
         }
     }
+
+    scrollToRegister() {
+        const element = document.getElementById('register');
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
 }

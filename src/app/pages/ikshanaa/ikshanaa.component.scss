@@ -56,27 +56,29 @@
 
 .highlight {
     color: #d4a574;
+    font-weight: 600;
 }
 
+
+// Info Section
 // Info Section
 .info-section {
     padding: 5rem 0;
     background: #fff;
 
-    .flyer-img {
-        border-radius: 8px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
-
-        &:hover {
-            transform: translateY(-5px);
-        }
+    // "What is iKshanaa" paragraph consistency
+    p {
+        color: #555;
+        line-height: 1.8;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
     }
 
     .lead {
-        font-size: 1.1rem;
+        font-size: 1.15rem;
+        font-weight: 400;
+        color: #444;
         line-height: 1.8;
-        color: #555;
     }
 
     .highlights {
@@ -95,13 +97,8 @@
         background-color: #f9fdfa;
         border: 1px solid #eef5f2;
     }
-}
 
-// Registration Section
-.registration-section {
-    padding: 5rem 0;
-    background: #f5f5f5;
-
+    // Registration Form Styles
     .card {
         border-radius: 12px;
         overflow: hidden;
@@ -152,6 +149,7 @@
     }
 }
 
+
 // Mobile Responsiveness
 @media (max-width: 768px) {
     .hero-section {
@@ -162,8 +160,7 @@
         }
     }
 
-    .info-section,
-    .registration-section {
+    .info-section {
         padding: 3rem 0;
     }
 
