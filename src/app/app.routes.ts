@@ -5,6 +5,10 @@ import { ShreejaAshramComponent } from './pages/shreeja-ashram/shreeja-ashram.co
 import { DonatePageComponent } from './pages/donate-page/donate-page.component';
 import { NewsletterJan2025Component } from './pages/newsletters/newsletter-jan-2025/newsletter-jan-2025';
 import { NewsletterJul2025Component } from './pages/newsletters/newsletter-jul-2025/newsletter-jul-2025';
+import { NewsletterJanJun2025Component } from './pages/newsletters/newsletter-jan-jun-2025/newsletter-jan-jun-2025';
+import { NewsletterJanApr2024 } from './pages/newsletters/newsletter-jan-apr-2024/newsletter-jan-apr-2024';
+import { NewsletterMayAug2024 } from './pages/newsletters/newsletter-may-aug-2024/newsletter-may-aug-2024';
+import { NewsletterOctDec2024 } from './pages/newsletters/newsletter-oct-dec-2024/newsletter-oct-dec-2024';
 import { NewslettersOverviewComponent } from './pages/newsletters/newsletters-overview/newsletters-overview';
 import { NotFoundComponent } from './pages/not-found/not-found';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy';
@@ -21,7 +25,11 @@ export const routes: Routes = [
     { path: 'donate', component: DonatePageComponent },
     { path: 'newsletters', component: NewslettersOverviewComponent },
     { path: 'newsletters/jan-2025', component: NewsletterJan2025Component },
+    { path: 'newsletters/jan-jun-2025', component: NewsletterJanJun2025Component },
     { path: 'newsletters/jul-2025', component: NewsletterJul2025Component },
+    { path: 'newsletters/jan-apr-2024', component: NewsletterJanApr2024 },
+    { path: 'newsletters/may-aug-2024', component: NewsletterMayAug2024 },
+    { path: 'newsletters/oct-dec-2024', component: NewsletterOctDec2024 },
     { path: 'karmayog/stand-for-animals', component: StandForAnimalsComponent },
     { path: 'karmayog/bhavasana', component: BhavasanaComponent },
     { path: 'karmayog/shree-guru-vidyalaya', component: ShreeGuruVidyalayaComponent },
