@@ -6,14 +6,13 @@
 // Hero Section
 .hero-section {
     position: relative;
-    height: 60vh;
-    min-height: 400px;
-    // Using shreejaashram image as it is the venue, provides good spiritual context
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    height: 70vh;
+    min-height: 450px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.6)),
         url('/ikshanaa-header.jpg');
-    background-size: cover, cover;
-    background-position: center, center bottom -30px;
-    background-repeat: no-repeat, no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,16 +23,25 @@
         h1 {
             font-size: 3.5rem;
             font-weight: 300;
-            letter-spacing: 4px;
+            letter-spacing: 6px;
             text-transform: uppercase;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             margin-bottom: 0.5rem;
         }
 
-        p {
+        .guru-quote {
             font-size: 1.2rem;
             font-weight: 300;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            line-height: 1.8;
+        }
+
+        .quote-attribution {
+            font-size: 0.9rem;
+            font-weight: 400;
             letter-spacing: 2px;
+            color: #d4a574;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
     }
@@ -50,6 +58,12 @@
 
 .section-title {
     color: #2e5c46;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.section-title-light {
+    color: #ffffff;
     font-size: 2.5rem;
     font-weight: 400;
 }
@@ -71,8 +85,135 @@
     background-color: #4a3c31 !important;
 }
 
-// CTA Button - Elegant Green with Gold accent
-// Flows matches the page theme (Green) but the Gold border adds a premium touch to attract clicks
+.text-white-75 {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+// Philosophy Section
+.philosophy-section {
+    p {
+        color: #555;
+        line-height: 1.9;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+    }
+
+    .lead {
+        font-size: 1.15rem;
+        font-weight: 400;
+        color: #444;
+        line-height: 1.9;
+    }
+}
+
+// About Section
+.about-section {
+    .about-offerings-card {
+        background: #ffffff;
+        border-left: 4px solid #d4a574;
+
+        li {
+            font-size: 1.05rem;
+            color: #444;
+            line-height: 1.6;
+        }
+    }
+}
+
+// Offer Cards
+.offer-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px !important;
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-title {
+        min-height: 3rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .card-text {
+        text-align: left;
+        flex-grow: 1;
+    }
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(46, 92, 70, 0.12) !important;
+    }
+}
+
+// Programme Section
+.programme-section {
+    .activity-item {
+        background: rgba(255, 255, 255, 0.08);
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+        font-size: 0.95rem;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.14);
+        }
+
+        i {
+            font-size: 1.1rem;
+            min-width: 24px;
+        }
+    }
+}
+
+// Guru Mission Section
+.guru-mission-section {
+    .guru-quote-block {
+        background: #ffffff;
+        border-left: 4px solid #2e5c46;
+        max-width: 700px;
+        text-align: left;
+
+        p {
+            color: #555;
+            line-height: 1.9;
+            font-size: 1rem;
+        }
+
+        strong {
+            color: #2e5c46;
+        }
+    }
+}
+
+// Ashram Section
+.ashram-section {
+    .lead {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+
+// Connect Section
+.connect-section {
+    .social-link {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+        background: rgba(255, 255, 255, 0.08);
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.18);
+            transform: translateY(-2px);
+        }
+    }
+}
+
+// CTA Button
 .btn-cta {
     background-color: #2e5c46;
     color: #ffffff;
@@ -97,122 +238,80 @@
     }
 }
 
-
-// Info Section
-// Info Section
-.info-section {
-    padding: 5rem 0;
-    background: #fff;
-
-    // "What is iKshanaa" paragraph consistency
-    p {
-        color: #555;
-        line-height: 1.8;
-        font-weight: 400;
-        margin-bottom: 1.5rem;
-    }
-
-    .lead {
-        font-size: 1.15rem;
-        font-weight: 400;
-        color: #444;
-        line-height: 1.8;
-    }
-
-    .highlights {
-        background: #fdfdfd;
-        padding: 1.5rem;
-        border-left: 4px solid #d4a574;
-
-        li {
-            margin-bottom: 0.5rem;
-            font-size: 1.05rem;
-            color: #444;
-        }
-    }
-
-    .details-box {
-        background-color: #f9fdfa;
-        border: 1px solid #eef5f2;
-    }
-
-    // Registration Form Styles
-    .card {
-        border-radius: 12px;
-        overflow: hidden;
-    }
-
-    .form-label {
-        font-size: 0.85rem;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        color: #555;
-        margin-bottom: 0.5rem;
-    }
-
-    .form-control,
-    .form-select {
-        padding: 0.75rem 1rem;
-        border: 1px solid #ddd;
-        border-radius: 6px;
-        font-size: 0.95rem;
-        transition: all 0.2s;
-
-        &:focus {
-            border-color: #2e5c46;
-            box-shadow: 0 0 0 3px rgba(46, 92, 70, 0.1);
-        }
-    }
-
-    .btn-primary {
-        background-color: #2e5c46;
-        border-color: #2e5c46;
-        font-weight: 600;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        font-size: 0.9rem;
-        transition: all 0.3s;
-
-        &:hover:not([disabled]) {
-            background-color: #244a38;
-            border-color: #244a38;
-            transform: translateY(-2px);
-        }
-
-        &:disabled {
-            background-color: #7a9689;
-            border-color: #7a9689;
-            cursor: not-allowed;
-        }
-    }
+// Registration Form
+.card {
+    border-radius: 12px;
+    overflow: hidden;
 }
 
+.form-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.form-control,
+.form-select {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+
+    &:focus {
+        border-color: #2e5c46;
+        box-shadow: 0 0 0 3px rgba(46, 92, 70, 0.1);
+    }
+}
 
 // Mobile Responsiveness
 @media (max-width: 768px) {
     .hero-section {
-        height: 50vh;
+        height: 60vh;
 
         .hero-overlay h1 {
             font-size: 2.5rem;
+            letter-spacing: 4px;
+        }
+
+        .hero-overlay .guru-quote {
+            font-size: 1rem;
         }
     }
 
-    .info-section {
-        padding: 3rem 0;
-    }
-
-    .section-title {
+    .section-title,
+    .section-title-light {
         font-size: 2rem;
     }
 
-    .highlights-section {
-        .lead {
-            font-size: 1rem !important; // Standard size for mobile readability
+    .offer-card {
+        &:hover {
+            transform: none;
         }
+    }
 
-        i {
-            font-size: 1.25rem !important; // Smaller icons to match text
+    .connect-section {
+        .social-link span {
+            display: none;
         }
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        height: 55vh;
+        min-height: 380px;
+
+        .hero-overlay h1 {
+            font-size: 2rem;
+            letter-spacing: 3px;
+        }
+    }
+
+    .section-title,
+    .section-title-light {
+        font-size: 1.75rem;
     }
 }

@@ -1,12 +1,13 @@
 import { Component, NgZone, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import * as emailjs from '@emailjs/browser';
 
 @Component({
     selector: 'app-ikshanaa',
     standalone: true,
-    imports: [CommonModule, ReactiveFormsModule],
+    imports: [CommonModule, ReactiveFormsModule, RouterLink],
     templateUrl: './ikshanaa.component.html',
     styleUrls: ['./ikshanaa.component.scss']
 })
