@@ -6,6 +6,7 @@ import { Uttarann } from '../../components/uttarann/uttarann';
 import { Shreejaashram } from '../../components/shreejaashram/shreejaashram';
 import { MaashreeSays } from '../../components/maashree-says/maashree-says';
 import { Activities } from '../../components/activities/activities';
+import { BooksPreview } from '../../components/books-preview/books-preview';
 
 
 @Component({
@@ -15,6 +16,7 @@ import { Activities } from '../../components/activities/activities';
         Hero,
         MaashreeIntro,
         NewsletterPreview,
+        BooksPreview,
         Uttarann,
         Shreejaashram,
         MaashreeSays,

@@ -1,0 +1,221 @@
+<div class="book-reader" role="application" aria-label="Book reader: The Awakened Breath"
+    (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)">
+
+    <!-- Top Bar -->
+    <nav class="reader-topbar" aria-label="Book navigation">
+        <a routerLink="/books" class="back-link" aria-label="Back to Books library">← Back to Books</a>
+        <button class="chapter-toggle" (click)="toggleChapterMenu()"
+            [attr.aria-expanded]="showChapterMenu"
+            aria-haspopup="true"
+            aria-controls="chapter-panel">
+            📖 Chapters
+        </button>
+    </nav>
+
+    <!-- Chapter Menu Overlay -->
+    @if (showChapterMenu) {
+    <div class="chapter-overlay" (click)="toggleChapterMenu()" role="dialog" aria-modal="true"
+        aria-label="Table of Contents">
+        <aside class="chapter-panel" id="chapter-panel" (click)="$event.stopPropagation()" role="navigation"
+            aria-label="Chapter navigation">
+            <div class="chapter-panel-header">
+                <h4 id="toc-heading">Table of Contents</h4>
+                <button class="close-btn" (click)="toggleChapterMenu()" aria-label="Close table of contents">✕</button>
+            </div>
+            <ul class="chapter-list" role="list" aria-labelledby="toc-heading">
+                @for (chapter of chapters; track chapter.pageIndex) {
+                <li role="listitem"
+                    [class.active]="currentPage === chapter.pageIndex"
+                    [attr.aria-current]="currentPage === chapter.pageIndex ? 'page' : null"
+                    (click)="goToPage(chapter.pageIndex)"
+                    (keydown.enter)="goToPage(chapter.pageIndex)"
+                    (keydown.space)="goToPage(chapter.pageIndex); $event.preventDefault()"
+                    tabindex="0">
+                    <span class="chapter-name">{{ chapter.title }}</span>
+                    @if (chapter.subtitle) {
+                    <span class="chapter-subtitle">{{ chapter.subtitle }}</span>
+                    }
+                </li>
+                }
+            </ul>
+        </aside>
+    </div>
+    }
+
+    <!-- Page Content Area -->
+    <main class="page-container" aria-live="polite" aria-atomic="true">
+
+        <!-- Page 0: Cover -->
+        @if (currentPage === 0) {
+        <article class="book-page cover-page" role="region" aria-label="Cover page">
+            <div class="cover-border">
+                <div class="lotus-icon" aria-hidden="true">🪷</div>
+                <h1 class="book-title">The Awakened Breath</h1>
+                <p class="book-subtitle">Unveiling the Purpose of Life: Reflections on Truth, Karma, and
+                    Consciousness from the Wisdom of Shree Guru Maashree</p>
+                <img src="/logo.png" alt="Maashree Logo" class="smart-logo" width="70" height="70">
+            </div>
+        </article>
+        }
+
+        <!-- Page 1: Foreword -->
+        @if (currentPage === 1) {
+        <article class="book-page interior-page" role="region" aria-label="Foreword — A Pause in the Race">
+            <h2 class="chapter-title">Foreword</h2>
+            <h3 class="section-heading">A Pause in the Race</h3>
+            <p>Look around you. We live in an era of unprecedented speed, where the human mind is constantly pulled
+                outward by the demands of society, the pursuit of wealth, and the noise of digital life. We build our
+                identities—our "Egos"—around what we own, who respects us, and what we have achieved.</p>
+            <p>But at the end of a busy day, when the noise fades and you are left with just your own breath, a quiet
+                voice whispers: <em>Is this all there is? Why am I really here?</em></p>
+            <p>This booklet is an invitation to pause. It is a distillation of the profound, living wisdom of Shree Guru
+                Maashree—a beacon of light whose teachings shift our focus from external survival to internal liberation.
+                It is time to wipe the dust from the mirror of your mind and discover the boundless truth that rests
+                within you.</p>
+        </article>
+        }
+
+        <!-- Page 2: Chapter One -->
+        @if (currentPage === 2) {
+        <article class="book-page interior-page" role="region" aria-label="Chapter One — The Grand Illusion and Our Real Purpose">
+            <h2 class="chapter-title">Chapter One</h2>
+            <h3 class="section-heading">The Grand Illusion and Our Real Purpose</h3>
+            <p>From childhood, we are taught how to survive, how to compete, and how to manage the world around us. Yet,
+                we are rarely taught how to manage ourselves. We live trapped in the domain of <em>Mahamaya</em>—the
+                great illusion—where we identify solely with our physical bodies and our fleeting desires.</p>
+            <p>Your real purpose on Earth is not merely to accumulate material wealth or societal validation. The true
+                objective of human birth is what Maashree calls <em>Atma Dweej</em>—the second, spiritual birth.</p>
+            <p>Just as a bird must crack its shell to experience the vast sky, the human soul must shatter the hard shell
+                of the Ego (Aham) to experience the <em>Bodhi Mind</em>—a state of pure, awakened, and unconditioned
+                consciousness. We are here to realize that we are not separate, isolated beings fighting against the
+                world, but vital drops of the same infinite cosmic energy. We are here to remember the Divine.</p>
+        </article>
+        }
+
+        <!-- Page 3: Chapter Two -->
+        @if (currentPage === 3) {
+        <article class="book-page interior-page" role="region" aria-label="Chapter Two — The Nature of Our Current Karma">
+            <h2 class="chapter-title">Chapter Two</h2>
+            <h3 class="section-heading">The Nature of Our Current Karma</h3>
+            <p>Often, we misunderstand "Karma" as a system of punishment and reward, or we believe that spiritual life
+                requires abandoning our families and escaping to the mountains. The wisdom of Shree Guru Maashree reveals
+                a different path: true renunciation happens in the mind, not in physical escape.</p>
+            <p>Your current karma on Earth is to live fully in the world, yet remain untouched by its greed—like a lotus
+                drawing nourishment from the mud but remaining pristine.</p>
+            <p>Every action you take can be transformed into a divine offering (<em>Guru Karya</em>). When you act out of
+                selfishness, anger, or the need to prove your superiority, you bind yourself to suffering. But when you
+                act with compassion, purity, and a sense of duty without attachment to the results, your karma becomes a
+                tool for liberation.</p>
+            <p>This extends to all living beings. True spiritual karma is rooted in universal love and non-violence
+                (<em>Ahimsa</em>). Whether it is serving the underprivileged or standing as a protector for voiceless
+                animals, recognizing the divine presence in every atom of creation is the highest form of action.</p>
+        </article>
+        }
+
+        <!-- Page 4: Chapter Three -->
+        @if (currentPage === 4) {
+        <article class="book-page interior-page" role="region" aria-label="Chapter Three — Cleaning the Mirror of the Mind">
+            <h2 class="chapter-title">Chapter Three</h2>
+            <h3 class="section-heading">Cleaning the Mirror of the Mind</h3>
+            <p>Why do we suffer? We suffer because the instrument through which we view reality—our mind—is clouded by
+                the dust of endless thoughts, judgments, and desires. When the mirror is dirty, everything it reflects
+                appears distorted.</p>
+            <p>To fulfill your purpose, you must cultivate <em>Moun</em> (inner silence). This is not the forced
+                silencing of the mouth, but the quietening of the restless mind. Meditation is not meant to be a
+                struggle; it is an effortless plugging in of your awareness to the Divine Source, much like a phone
+                drawing power from a charger while still functioning.</p>
+            <p>Start by observing your breath—the <em>Nitya</em> (the eternal, constant flow) that reminds you of your
+                life force. By tuning into this quiet rhythm, the mind drops its anxieties about the past and future,
+                settling into the profound peace of the present moment.</p>
+        </article>
+        }
+
+        <!-- Page 5: Chapter Four -->
+        @if (currentPage === 5) {
+        <article class="book-page interior-page" role="region" aria-label="Chapter Four — Conquering the Inner Fear">
+            <h2 class="chapter-title">Chapter Four</h2>
+            <h3 class="section-heading">Conquering the Inner Fear</h3>
+            <p>Fear is a shadow cast by the ego. As long as we identify strictly with our physical bodies and worldly
+                attachments—the "Small I"—we remain trapped in the anxiety of loss, pain, and the unknown. Maashree
+                explains that true fearlessness cannot be achieved merely by intellectual questioning or logical debate;
+                it must be experienced by transcending body consciousness.</p>
+            <p>In a profound parable from Her own spiritual journey in Kanyakumari, Maashree describes meditating deeply
+                from morning until evening. At one point, She realized Her physical body was covered in large, stinging
+                red ants. For a fleeting moment, the mind became restless, fearing the impending pain. However, She
+                noticed that as long as She remained anchored in the deep meditative state, the ants did not bite.
+                Choosing to dive back into the transcendental silence, the "I" dissolved completely. When She finally
+                arose, the ants were gone, and She was untouched.</p>
+            <p>This serves as a powerful testament: when the ego is absent, the physical threats of the world lose their
+                grip. To overcome inner fear, Maa advises us to stop identifying with the temporary and align with the
+                eternal. When you surrender to the Guru's guidance and step beyond the confines of the ego, the illusions
+                that cause fear shatter. When there is no "I", where can fear reside?</p>
+        </article>
+        }
+
+        <!-- Page 6: Conclusion -->
+        @if (currentPage === 6) {
+        <article class="book-page interior-page" role="region" aria-label="Conclusion — The Grace of the Guide">
+            <h2 class="chapter-title">Conclusion</h2>
+            <h3 class="section-heading">The Grace of the Guide</h3>
+            <p>The journey from the darkness of ignorance to the light of self-realization is steep. The ego is a master
+                of deception, often convincing us that we already know everything. This is why the presence of a
+                spiritual guide—a Guru—is the ultimate sanctuary.</p>
+            <p>The Guru is not just a person, but a living state of pure consciousness. They act as a pristine mirror to
+                your soul, showing you your true potential while ruthlessly cutting away the illusions that bind you.</p>
+            <p>You have the right to be happy. You have the right to evolve. Step away from the noise, question your
+                endless desires, and channel your thoughts toward truth. The universe is vast, and your life is a rare,
+                precious opportunity to awaken to the eternal peace that is already yours.</p>
+            <blockquote class="quote-block" role="figure" aria-label="Quote">"Jago Manab — Awaken, O Human Mind."</blockquote>
+        </article>
+        }
+
+        <!-- Page 7: Back Cover -->
+        @if (currentPage === 7) {
+        <article class="book-page cover-page back-cover" role="region" aria-label="Back cover">
+            <div class="cover-border">
+                <div class="lotus-icon" aria-hidden="true">🪷</div>
+                <blockquote class="quote-block back-quote" role="figure" aria-label="Quote">
+                    "The longer one can be with the physical presence of Truth, the more chances of progress will remain
+                    with the seeker. The knowledge imparted can only be retained if you are prepared with a pure,
+                    pristine, and clear mental state."
+                </blockquote>
+                <p class="back-cover-text">
+                    To dive deeper into the discourses, guided meditations (Bhavasana), and the charitable Karma Yog
+                    initiatives (such as Tribal Welfare and Stand For Animals) inspired by these teachings, explore the
+                    digital sanctuary of the Uttarann Spiritual Foundation.
+                </p>
+                <address class="social-links">
+                    <p><strong>YouTube:</strong> Maashree Says (&#64;maashreesuttarann)</p>
+                    <p><strong>Instagram:</strong> &#64;uttaran_shreejashram</p>
+                    <p><strong>Website:</strong> www.maashreeaum.org</p>
+                </address>
+                <img src="/logo.png" alt="Maashree Logo" class="smart-logo" width="70" height="70">
+            </div>
+        </article>
+        }
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="reader-bottombar" aria-label="Page navigation">
+        <div class="nav-controls">
+            <button class="nav-btn" (click)="prevPage()" [disabled]="currentPage === 0"
+                [attr.aria-label]="'Previous page' + (currentPage > 0 ? ': ' + chapters[currentPage - 1].title : '')">
+                ◀ Prev
+            </button>
+            <span class="page-indicator" aria-live="polite" role="status">
+                Page {{ currentPage + 1 }} of {{ totalPages }}
+            </span>
+            <button class="nav-btn" (click)="nextPage()" [disabled]="currentPage === totalPages - 1"
+                [attr.aria-label]="'Next page' + (currentPage < totalPages - 1 ? ': ' + chapters[currentPage + 1].title : '')">
+                Next ▶
+            </button>
+        </div>
+        <div class="progress-bar-wrapper" role="progressbar"
+            [attr.aria-valuenow]="currentPage + 1"
+            aria-valuemin="1"
+            [attr.aria-valuemax]="totalPages"
+            [attr.aria-label]="'Reading progress: page ' + (currentPage + 1) + ' of ' + totalPages">
+            <div class="progress-fill" [style.width.%]="progress"></div>
+        </div>
+    </nav>
+</div>

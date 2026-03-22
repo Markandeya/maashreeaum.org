@@ -14,6 +14,8 @@ export const routes: Routes = [
     { path: 'newsletters/may-aug-2024', loadComponent: () => import('./pages/newsletters/newsletter-may-aug-2024/newsletter-may-aug-2024').then(m => m.NewsletterMayAug2024) },
     { path: 'newsletters/oct-dec-2025', loadComponent: () => import('./pages/newsletters/newsletter-oct-dec-2025/newsletter-oct-dec-2025').then(m => m.NewsletterOctDec2025Component) },
     { path: 'newsletters/oct-dec-2024', loadComponent: () => import('./pages/newsletters/newsletter-oct-dec-2024/newsletter-oct-dec-2024').then(m => m.NewsletterOctDec2024) },
+    { path: 'books', loadComponent: () => import('./pages/books/books-overview/books-overview').then(m => m.BooksOverviewComponent) },
+    { path: 'books/the-awakened-breath', loadComponent: () => import('./pages/books/awakened-breath/awakened-breath').then(m => m.AwakenedBreathComponent) },
     { path: 'karmayog/stand-for-animals', loadComponent: () => import('./pages/karmayog/stand-for-animals-page/stand-for-animals.component').then(m => m.StandForAnimalsComponent) },
     { path: 'karmayog/bhavasana', loadComponent: () => import('./pages/karmayog/bhavasana-page/bhavasana.component').then(m => m.BhavasanaComponent) },
     { path: 'karmayog/shree-guru-vidyalaya', loadComponent: () => import('./pages/karmayog/shree-guru-vidyalaya-page/shree-guru-vidyalaya.component').then(m => m.ShreeGuruVidyalayaComponent) },
