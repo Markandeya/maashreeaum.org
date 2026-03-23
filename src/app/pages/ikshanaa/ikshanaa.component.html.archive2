@@ -8,9 +8,8 @@
                 <em>'A single thought is enough to<br>open multiple sites in your mind'</em>
             </p>
             <p class="quote-attribution mb-4">— Shree Guru</p>
-            <div class="stay-tuned-badge">
-                <i class="bi bi-bell me-2"></i> Stay tuned for the next scheduled date
-            </div>
+            <button class="btn btn-outline-light px-5 py-3 rounded-pill letter-spacing-2 fw-bold"
+                (click)="scrollToRegister()">REGISTER NOW</button>
         </div>
     </section>
 
@@ -140,6 +139,25 @@
                 <h2 class="section-title-light">✨ Programme Highlights</h2>
             </div>
 
+            <!-- Dates Strip -->
+            <div class="row justify-content-center g-4 mb-5">
+                <div class="col-md-4 text-center">
+                    <i class="bi bi-box-arrow-in-right fs-2 mb-3 d-block text-warning"></i>
+                    <h5 class="mb-1">ARRIVAL</h5>
+                    <p class="mb-0 text-white-75">@ 4pm on 20th March, 2026</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="bi bi-box-arrow-right fs-2 mb-3 d-block text-warning"></i>
+                    <h5 class="mb-1">DEPARTURE</h5>
+                    <p class="mb-0 text-white-75">@ 12pm on 23rd March, 2026</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="bi bi-geo-alt fs-2 mb-3 d-block text-warning"></i>
+                    <h5 class="mb-1">VENUE</h5>
+                    <p class="mb-0 text-white-75">Shreejaashram, Khodala, Maharashtra</p>
+                </div>
+            </div>
+
             <!-- Activities -->
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -189,7 +207,8 @@
                         </div>
                     </div>
                     <p class="text-center text-white-50 fst-italic mt-4 small">
-                        Stay tuned — the next programme date will be announced soon.
+                        Programme schedule and advisories will be shared with participants upon completion of
+                        registration, on their individual email ids.
                     </p>
                 </div>
             </div>
@@ -221,6 +240,141 @@
                             teachings, it becomes possible to walk this highest of paths amidst the responsibilities of
                             daily life.
                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Shreejaashram Section -->
+    <section class="py-5 bg-white ashram-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9 text-center">
+                    <h6 class="subtitle mb-3 text-warning">THE VENUE</h6>
+                    <h2 class="section-title mb-4">About Shreejaashram</h2>
+                    <p class="lead text-muted mb-4">
+                        Shreejashram is a peaceful and sacred sanctuary nestled in the picturesque locale of the
+                        Sahyadri ranges of Maharashtra, located approximately 124 km from Mumbai via the Mumbai-Nashik
+                        highway.
+                    </p>
+                    <a routerLink="/shreeja-ashram" class="btn btn-outline-dark rounded-pill px-4 py-2">
+                        Learn more about Shreejaashram <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="py-5 bg-light" id="register">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow border-0 overflow-hidden">
+                        <div class="card-header bg-green text-white text-center py-4">
+                            <h3 class="mb-0">Ready to Begin Your Inner Journey?</h3>
+                            <p class="mb-0 mt-2 text-white-50">Fill out the form below to register</p>
+                        </div>
+                        <div class="card-body p-4 p-md-5">
+                            <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+                                <div class="row g-3">
+                                    <!-- Name -->
+                                    <div class="col-12">
+                                        <label for="name" class="form-label">Full Name <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="name" formControlName="name"
+                                            [class.is-invalid]="f['name'].touched && f['name'].invalid">
+                                        <div class="invalid-feedback" *ngIf="f['name'].errors?.['required']">
+                                            Name is required
+                                        </div>
+                                    </div>
+
+                                    <!-- Age & Gender -->
+                                    <div class="col-md-6">
+                                        <label for="age" class="form-label">Age <span
+                                                class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" id="age" formControlName="age"
+                                            [class.is-invalid]="f['age'].touched && f['age'].invalid">
+                                        <div class="invalid-feedback">Age is required</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="gender" class="form-label">Gender <span
+                                                class="text-danger">*</span></label>
+                                        <select class="form-select" id="gender" formControlName="gender"
+                                            [class.is-invalid]="f['gender'].touched && f['gender'].invalid">
+                                            <option value="">Select Gender</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        <div class="invalid-feedback">Gender is required</div>
+                                    </div>
+
+                                    <!-- Contact Info -->
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email <span
+                                                class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" id="email" formControlName="email"
+                                            [class.is-invalid]="f['email'].touched && f['email'].invalid">
+                                        <div class="invalid-feedback" *ngIf="f['email'].errors?.['required']">Email is
+                                            required</div>
+                                        <div class="invalid-feedback" *ngIf="f['email'].errors?.['email']">Please enter
+                                            a valid email</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label">Phone <span
+                                                class="text-danger">*</span></label>
+                                        <input type="tel" class="form-control" id="phone" formControlName="phone"
+                                            [class.is-invalid]="f['phone'].touched && f['phone'].invalid">
+                                        <div class="invalid-feedback">Phone is required</div>
+                                    </div>
+
+                                    <!-- Location -->
+                                    <div class="col-12">
+                                        <label for="location" class="form-label">Location (City, State) <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="location" formControlName="location"
+                                            [class.is-invalid]="f['location'].touched && f['location'].invalid">
+                                        <div class="invalid-feedback">Location is required</div>
+                                    </div>
+
+                                    <!-- Expectations -->
+                                    <div class="col-12">
+                                        <label for="expectations" class="form-label">What do you hope to gain from
+                                            this?</label>
+                                        <textarea class="form-control" id="expectations" rows="3"
+                                            formControlName="expectations"></textarea>
+                                    </div>
+
+                                    <!-- Physical Ailments -->
+                                    <div class="col-12">
+                                        <label for="ailments" class="form-label">Physical Ailments (Optional)</label>
+                                        <textarea class="form-control" id="ailments" rows="2" formControlName="ailments"
+                                            placeholder="Any physical issues we should be aware of?"></textarea>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <div class="col-12 mt-4">
+                                        <button type="submit" class="btn btn-cta w-100 py-3 fw-bold letter-spacing-1"
+                                            [disabled]="isSubmitting">
+                                            <span *ngIf="!isSubmitting">REGISTER NOW</span>
+                                            <span *ngIf="isSubmitting" class="spinner-border spinner-border-sm me-2"
+                                                role="status" aria-hidden="true"></span>
+                                            <span *ngIf="isSubmitting">Processing...</span>
+                                        </button>
+                                    </div>
+
+                                    <!-- Status Messages -->
+                                    <div class="col-12" *ngIf="submitStatus">
+                                        <div class="alert"
+                                            [ngClass]="{'alert-success': submitStatus === 'success', 'alert-danger': submitStatus === 'error'}">
+                                            {{ statusMessage }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

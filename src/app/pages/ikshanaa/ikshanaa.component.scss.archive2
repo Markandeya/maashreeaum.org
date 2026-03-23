@@ -44,34 +44,6 @@
             color: #d4a574;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
-
-        .stay-tuned-badge {
-            display: inline-block;
-            padding: 0.85rem 2rem;
-            border: 1.5px solid rgba(212, 165, 116, 0.7);
-            border-radius: 50px;
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(6px);
-            color: #d4a574;
-            font-size: 1rem;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-            animation: gentle-pulse 3s ease-in-out infinite;
-
-            i {
-                font-size: 1.1rem;
-            }
-        }
-    }
-}
-
-@keyframes gentle-pulse {
-    0%, 100% {
-        box-shadow: 0 0 0 0 rgba(212, 165, 116, 0.25);
-    }
-    50% {
-        box-shadow: 0 0 18px 4px rgba(212, 165, 116, 0.15);
     }
 }
 
@@ -216,6 +188,14 @@
     }
 }
 
+// Ashram Section
+.ashram-section {
+    .lead {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+}
+
 // Connect Section
 .connect-section {
     .social-link {
@@ -230,6 +210,59 @@
             background: rgba(255, 255, 255, 0.18);
             transform: translateY(-2px);
         }
+    }
+}
+
+// CTA Button
+.btn-cta {
+    background-color: #2e5c46;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    font-weight: 700;
+
+    &:hover {
+        background-color: #d4a574;
+        border-color: #d4a574;
+        color: #2e5c46;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(46, 92, 70, 0.3);
+    }
+
+    &:disabled {
+        background-color: #7a9689;
+        border-color: #7a9689;
+        color: #e0e0e0;
+        cursor: not-allowed;
+        box-shadow: none;
+        transform: none;
+    }
+}
+
+// Registration Form
+.card {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.form-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.form-control,
+.form-select {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+
+    &:focus {
+        border-color: #2e5c46;
+        box-shadow: 0 0 0 3px rgba(46, 92, 70, 0.1);
     }
 }
 
