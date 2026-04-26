@@ -1,257 +1,541 @@
-<div class="ikshanaa-container">
+<div class="ikshanaa-container monsoon-theme">
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero-section"
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('/ikshanaa/devdhara-1.jpeg');">
         <div class="hero-overlay text-center text-white">
-            <h1 class="mb-2">iKSHANAA</h1>
-            <h4 class="fw-light letter-spacing-2 mb-3">Deep Meditation</h4>
-            <p class="guru-quote mb-4">
-                <em>'A single thought is enough to<br>open multiple sites in your mind'</em>
-            </p>
-            <p class="quote-attribution mb-4">— Shree Guru</p>
-            <div class="stay-tuned-badge">
-                <i class="bi bi-bell me-2"></i> Stay tuned for the next scheduled date
+            <!-- Main Title & Subtitle -->
+            <h1 class="display-2 fw-light letter-spacing-3 mb-2">IKSHANAA</h1>
+            <p class="fs-5 letter-spacing-3 text-monsoon-accent fw-normal text-uppercase mb-5">Monsoon Edition</p>
+            
+            <!-- Guru Quote Block -->
+            <div class="hero-quote-box mx-auto mt-3 px-3 py-3 position-relative">
+                <h3 class="fw-light fst-italic mb-4" style="line-height: 1.5; font-size: 2rem;">
+                    "To Flow is to be Free"
+                </h3>
+                
+                <p class="fs-5 fw-light text-white-75 mb-4" style="line-height: 1.6; max-width: 500px; margin: 0 auto;">
+                    A single thought is enough to open multiple sites in your mind.
+                </p>
+                
+                <p class="quote-attribution mb-0 text-monsoon-accent fw-bold text-uppercase letter-spacing-2 fs-6">
+                    — Shree Guru
+                </p>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="mt-4 mt-lg-5 pt-2">
+                <button class="btn btn-hero-primary px-5 py-3 rounded-pill letter-spacing-1 fw-bold text-uppercase shadow-lg"
+                    (click)="scrollToRegister()">Register Now</button>
             </div>
         </div>
     </section>
 
-    <!-- Philosophy Section -->
-    <section class="py-5 bg-white philosophy-section">
-        <div class="container text-center">
-            <div class="row justify-content-center">
-                <div class="col-lg-9">
-                    <h6 class="subtitle mb-3 text-warning">THE ESSENCE</h6>
-                    <h2 class="section-title mb-4">Beyond Technique</h2>
-                    <p class="lead text-muted mb-4">
-                        Meditation is not merely a brief technique for temporary relief. It is a profound inner
-                        transformation that can be lived in every moment.
-                    </p>
-                    <p class="mb-4">
-                        True meditation is not confined to sitting in silence for a few minutes each day. It is a
-                        gradual awakening — a shift in awareness that transforms the way we think, respond, speak, and
-                        act in our everyday lives.
-                    </p>
-                    <p>
-                        When practiced sincerely, meditation becomes a <strong class="highlight">living
-                            presence</strong> within us — guiding clarity, balance, and compassion in all circumstances.
-                    </p>
+    <!-- The Invitation -->
+    <section class="py-5 py-lg-6 bg-white position-relative overflow-hidden pt-lg-5 pb-lg-4">
+        <div class="container py-4 position-relative z-1">
+            <div class="invitation-card position-relative">
+                <!-- Decorative flow accent -->
+                <i class="bi bi-wind position-absolute text-success" style="font-size: 20rem; bottom: -50px; left: -50px; opacity: 0.03; transform: rotate(-15deg); z-index: 0;"></i>
+                
+                <!-- Align items to START and anchor text to the center spine -->
+                <div class="row align-items-start gx-lg-5 gy-4 position-relative z-1 pt-2">
+                    
+                    <!-- Left: Title anchored Right -->
+                    <div class="col-lg-4 text-center text-lg-end pe-lg-5 border-end-lg mt-lg-2">
+                        <h6 class="subtitle mb-3 text-monsoon-accent letter-spacing-2 fw-bold">THE INVITATION</h6>
+                        <h2 class="display-6 fw-light text-monsoon-dark mb-0" style="line-height: 1.35;">Letting Go of <span class="fw-medium text-green d-block mt-2">Control</span></h2>
+                    </div>
+                    
+                    <!-- Right: Content anchored Left -->
+                    <div class="col-lg-8 ps-lg-5 text-center text-lg-start">
+                        <p class="fs-5 text-dark fw-normal mb-4" style="line-height: 1.8;">
+                            In life, we are constantly trying to control — situations, people, outcomes, and even our own thoughts. This constant effort creates <span class="text-secondary fst-italic">friction, resistance, and exhaustion.</span>
+                        </p>
+                        <p class="text-muted mb-4 fs-6 pb-2" style="line-height: 1.8;">
+                            But nature shows us another way. The rain does not ask where to fall. The river does not decide its path. And yet, both reach where they are meant to.
+                        </p>
+                        
+                        <!-- Floating Focus Box -->
+                        <div class="py-3 text-start position-relative">
+                            <p class="mb-0 fs-5 text-monsoon-dark position-relative z-1">
+                                This Ikshanaa is an invitation to experience <strong class="text-green fw-bold">Flow</strong> — a state where life is not forced, but allowed.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="py-5 bg-light about-section">
+    <!-- What is Flow Section -->
+    <section class="py-5 bg-light flow-section">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-9 text-center">
-                    <h6 class="subtitle mb-3 text-warning">ABOUT</h6>
-                    <h2 class="section-title mb-4">Ikshanaa Deep Meditation</h2>
+                    <h6 class="subtitle mb-3 text-monsoon-accent">THE STATE</h6>
+                    <h2 class="section-title mb-4">What is Flow?</h2>
                     <p class="lead text-muted mb-5">
-                        Ikshanaa is a guided inner journey designed for those who seek depth beyond technique.
+                        Flow is not passivity. It is not drifting without direction. It is a state of alignment where
+                        action happens without inner conflict.
                     </p>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="about-offerings-card p-4 rounded-3 shadow-sm">
-                        <h5 class="text-green mb-4 text-center">This programme offers:</h5>
-                        <ul class="list-unstyled">
-                            <li class="mb-3 d-flex align-items-start">
-                                <i class="bi bi-flower2 text-green fs-5 me-3 mt-1"></i>
-                                <span>Systematic guidance into deep meditative states</span>
-                            </li>
-                            <li class="mb-3 d-flex align-items-start">
-                                <i class="bi bi-eye text-green fs-5 me-3 mt-1"></i>
-                                <span>Practical understanding of awareness in daily life</span>
-                            </li>
-                            <li class="mb-3 d-flex align-items-start">
-                                <i class="bi bi-bullseye text-green fs-5 me-3 mt-1"></i>
-                                <span>Techniques to remain centered amidst activity</span>
-                            </li>
-                            <li class="mb-3 d-flex align-items-start">
-                                <i class="bi bi-peace text-green fs-5 me-3 mt-1"></i>
-                                <span>Silence-based practices for inner clarity</span>
-                            </li>
-                            <li class="mb-3 d-flex align-items-start">
-                                <i class="bi bi-arrow-repeat text-green fs-5 me-3 mt-1"></i>
-                                <span>Space for self-reflection and inner realignment</span>
-                            </li>
-                        </ul>
-                        <p class="text-center text-muted fst-italic mt-4 mb-0 small">
-                            Participants will learn not only how to meditate — but how to remain meditative throughout
-                            the day.
-                        </p>
+            <div class="row justify-content-center g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 offer-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-wind text-green fs-1 mb-3"></i>
+                            <h5 class="card-title text-dark mb-3">Clear Mind</h5>
+                            <p class="card-text text-muted small">When you are in flow, the mind is clear, not crowded.
+                            </p>
+                        </div>
                     </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 offer-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-compass text-green fs-1 mb-3"></i>
+                            <h5 class="card-title text-dark mb-3">Natural Decisions</h5>
+                            <p class="card-text text-muted small">Decisions arise naturally, not through struggle.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 offer-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-feather text-green fs-1 mb-3"></i>
+                            <h5 class="card-title text-dark mb-3">Effortless Action</h5>
+                            <p class="card-text text-muted small">Actions feel effortless, yet powerfully effective.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <p class="text-muted fst-italic">Through this program, you will begin to discover what it means to live
+                    without resistance.</p>
             </div>
         </div>
     </section>
 
-    <!-- What Ikshanaa Offers Section -->
-    <section class="py-5 bg-white">
+    <!-- What You Will Explore & Programme Experience -->
+    <section class="py-5 bg-monsoon-dark text-white programme-section">
         <div class="container">
-            <div class="text-center mb-5">
-                <h6 class="subtitle mb-3 text-warning">DISCOVER</h6>
-                <h2 class="section-title">🌱 What iKshanaa Offers</h2>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm p-4 offer-card">
-                        <div class="card-body text-center">
-                            <i class="bi bi-cloud-sun text-green fs-1 mb-3"></i>
-                            <h5 class="card-title text-green mb-3">Freedom from Thought Pollution</h5>
-                            <p class="card-text text-muted small">We explore how to quiet the never-ending thoughts
-                                stemming from emotional and psychological impact of peer pressure and job-related
-                                pressure, a part of modern living. Problems will cease to appear as problems once you
-                                master your mind.</p>
-                        </div>
-                    </div>
+            <div class="row g-5">
+                <!-- Explore -->
+                <div class="col-lg-5">
+                    <h6 class="text-uppercase text-monsoon-accent letter-spacing-2 mb-3">THE JOURNEY</h6>
+                    <h2 class="section-title-light mb-4">What You Will Explore</h2>
+                    <ul class="list-unstyled explore-list">
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="bi bi-arrow-right text-monsoon-accent me-3 mt-1"></i>
+                            <span>The difference between control and alignment</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="bi bi-arrow-right text-monsoon-accent me-3 mt-1"></i>
+                            <span>How resistance forms in the mind and body</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="bi bi-arrow-right text-monsoon-accent me-3 mt-1"></i>
+                            <span>Letting go of past impressions and expectations</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="bi bi-arrow-right text-monsoon-accent me-3 mt-1"></i>
+                            <span>Moving with life instead of against it</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="bi bi-arrow-right text-monsoon-accent me-3 mt-1"></i>
+                            <span>Experiencing stillness within movement</span>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm p-4 offer-card">
-                        <div class="card-body text-center">
-                            <i class="bi bi-bullseye text-green fs-1 mb-3"></i>
-                            <h5 class="card-title text-green mb-3">Healthy & Decisive Mental State</h5>
-                            <p class="card-text text-muted small">Regular practice of meditation and the steps that
-                                elevate the mind to that state of quietness leads to better focus and one-pointedness.
-                                That improves one's memory and ability to make better decisions.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm p-4 offer-card">
-                        <div class="card-body text-center">
-                            <i class="bi bi-yin-yang text-green fs-1 mb-3"></i>
-                            <h5 class="card-title text-green mb-3">Practical Tools for Inner Peace</h5>
-                            <p class="card-text text-muted small">You will learn simple yet powerful methods to bring
-                                you back to balance in everyday life.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Programme Highlights Section -->
-    <section class="py-5 bg-earth-dark text-white programme-section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h6 class="text-uppercase text-warning letter-spacing-2 mb-3">PROGRAMME</h6>
-                <h2 class="section-title-light">✨ Programme Highlights</h2>
-            </div>
-
-            <!-- Activities -->
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <h5 class="text-warning text-center mb-4">Programme will include:</h5>
+                <!-- Experience -->
+                <div class="col-lg-7">
+                    <h6 class="text-uppercase text-monsoon-accent letter-spacing-2 mb-3">THE RETREAT</h6>
+                    <h2 class="section-title-light mb-4">Programme Experience</h2>
+                    <p class="text-white-75 mb-4">The retreat is designed as an immersive journey, not just a set of
+                        sessions. You will be guided through:</p>
                     <div class="row g-3">
                         <div class="col-sm-6">
                             <div class="activity-item d-flex align-items-center">
-                                <i class="bi bi-flower2 text-warning me-3"></i>
+                                <i class="bi bi-flower1 text-monsoon-accent me-3"></i>
                                 <span>Focused Meditation sessions</span>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="activity-item d-flex align-items-center">
-                                <i class="bi bi-moon-stars text-warning me-3"></i>
-                                <span>Deep Meditation session</span>
+                                <i class="bi bi-water text-monsoon-accent me-3"></i>
+                                <span>Flow-based Deep Meditation</span>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="activity-item d-flex align-items-center">
-                                <i class="bi bi-person-arms-up text-warning me-3"></i>
-                                <span>Bhavaasana sessions</span>
+                                <i class="bi bi-person-arms-up text-monsoon-accent me-3"></i>
+                                <span>Bhavaasana practices</span>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="activity-item d-flex align-items-center">
-                                <i class="bi bi-search text-warning me-3"></i>
-                                <span>Introspection & Self-reflection</span>
+                                <i class="bi bi-search text-monsoon-accent me-3"></i>
+                                <span>Introspection and self-reflection</span>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="activity-item d-flex align-items-center">
-                                <i class="bi bi-tree text-warning me-3"></i>
-                                <span>Step out & experience Sahyadris</span>
+                                <i class="bi bi-cloud-rain text-monsoon-accent me-3"></i>
+                                <span>Nature immersion in the Sahyadris</span>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="activity-item d-flex align-items-center">
-                                <i class="bi bi-hand-thumbs-up text-warning me-3"></i>
-                                <span>Karma daan sessions</span>
+                                <i class="bi bi-hand-thumbs-up text-monsoon-accent me-3"></i>
+                                <span>Karma daan (seva) sessions</span>
                             </div>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-12">
                             <div class="activity-item d-flex align-items-center">
-                                <i class="bi bi-brightness-high text-warning me-3"></i>
-                                <span>Methods to integrate spirituality into everyday life</span>
+                                <i class="bi bi-brightness-alt-high text-monsoon-accent me-3"></i>
+                                <span>Simple methods to integrate flow into everyday life</span>
                             </div>
                         </div>
                     </div>
-                    <p class="text-center text-white-50 fst-italic mt-4 small">
-                        Stay tuned — the next programme date will be announced soon.
-                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Shree Guru's Mission Section -->
-    <section class="py-5 bg-light guru-mission-section">
+    <!-- The Monsoon Experience -->
+    <section class="py-5 py-lg-6 bg-white overflow-hidden">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 position-relative">
+                    <!-- Decorative back offset -->
+                    <div class="position-absolute rounded-4 w-100 h-100 top-0 start-0"
+                        style="background-color: rgba(110, 181, 144, 0.1); transform: translate(-5%, 5%); z-index: 0;">
+                    </div>
+                    <!-- Image -->
+                    <img src="/ikshanaa/children-umbrella.jpeg" alt="Monsoon Experience"
+                        class="img-fluid rounded-4 shadow-lg position-relative z-1 w-100 object-fit-cover"
+                        style="height: 500px;">
+                </div>
+                <div class="col-lg-6">
+                    <div class="ps-lg-5">
+                        <h6 class="subtitle mb-3 text-monsoon-accent fw-bold letter-spacing-2">THE SETTING</h6>
+                        <h2 class="section-title mb-4 fw-light">The Monsoon Experience</h2>
+
+                        <div class="pe-lg-3 mt-4">
+                            <p class="text-monsoon-dark mb-4 fs-5 fw-medium" style="line-height: 1.7;">
+                                Set in the lush Sahyadri ranges, the monsoon becomes a living part of the program.
+                            </p>
+
+                            <div class="d-flex mb-4 align-items-start">
+                                <div class="icon-circle-small bg-light rounded-circle p-3 me-4 d-flex align-items-center justify-content-center"
+                                    style="min-width: 60px; height: 60px;">
+                                    <i class="bi bi-cloud-rain text-monsoon-accent fs-4"></i>
+                                </div>
+                                <p class="text-muted mb-0 pt-1" style="line-height: 1.7; font-size: 1.05rem;">
+                                    The sound of rain, the mist in the mountains, and the freshness of the earth create
+                                    a natural environment for inner alignment.
+                                </p>
+                            </div>
+
+                            <div class="d-flex align-items-start">
+                                <div class="icon-circle-small bg-light rounded-circle p-3 me-4 d-flex align-items-center justify-content-center"
+                                    style="min-width: 60px; height: 60px;">
+                                    <i class="bi bi-arrow-repeat text-monsoon-accent fs-4"></i>
+                                </div>
+                                <p class="text-muted mb-0 pt-1" style="line-height: 1.7; font-size: 1.05rem;">
+                                    As nature flows effortlessly, you begin to sense the same possibility within.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You May Discover -->
+    <section class="py-5 bg-light discover-section">
+        <div class="container text-center">
+            <h6 class="subtitle mb-3 text-monsoon-accent">THE OUTCOME</h6>
+            <h2 class="section-title mb-5">What You Will Discover</h2>
+
+            <div class="row justify-content-center g-4 mb-5">
+                <div class="col-md-3 col-sm-6">
+                    <div class="discover-item text-center">
+                        <div class="icon-circle mx-auto mb-3">
+                            <i class="bi bi-cup-hot text-green fs-2"></i>
+                        </div>
+                        <h6 class="mb-0 fw-bold text-dark">A quieter, clearer mind</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="discover-item text-center">
+                        <div class="icon-circle mx-auto mb-3">
+                            <i class="bi bi-peace text-green fs-2"></i>
+                        </div>
+                        <h6 class="mb-0 fw-bold text-dark">Reduced overthinking</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="discover-item text-center">
+                        <div class="icon-circle mx-auto mb-3">
+                            <i class="bi bi-bezier2 text-green fs-2"></i>
+                        </div>
+                        <h6 class="mb-0 fw-bold text-dark">Ease in decision-making</h6>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="discover-item text-center">
+                        <div class="icon-circle mx-auto mb-3">
+                            <i class="bi bi-feather text-green fs-2"></i>
+                        </div>
+                        <h6 class="mb-0 fw-bold text-dark">Lightness and balance</h6>
+                    </div>
+                </div>
+            </div>
+
+            <p class="lead fw-normal fst-italic mx-auto" style="max-width: 700px; color: #555;">
+                "This is not about becoming something new. It is about returning to a state where life flows naturally
+                through you."
+            </p>
+        </div>
+    </section>
+
+    <!-- Shree Guru's Vision -->
+    <section class="py-5 py-lg-6 bg-light guru-mission-section">
+        <div class="container py-4">
+            <div class="row justify-content-center">
+                <div class="col-xl-10">
+                    <div class="vision-container position-relative bg-white rounded-4 shadow-sm p-4 p-md-5">
+
+                        <!-- Decorative Quote Mark -->
+                        <i class="bi bi-quote position-absolute fw-bold"
+                            style="font-size: 8rem; top: -30px; left: 10px; z-index: 0; line-height: 1; color: rgba(110, 181, 144, 0.15);"></i>
+
+                        <div class="row position-relative z-1 align-items-center g-4 g-md-0">
+                            <!-- Left: Title & Purpose -->
+                            <div class="col-md-5 text-center text-md-start pe-md-4 border-end-md d-flex align-items-center justify-content-center justify-content-md-start">
+                                <h2 class="display-6 fw-light text-monsoon-dark mb-0 text-uppercase letter-spacing-2">
+                                    Shree Guru<br><span class="fw-medium text-monsoon-accent">Says</span>
+                                </h2>
+                            </div>
+
+                            <!-- Right: The Teaching -->
+                            <div class="col-md-7">
+                                <div class="ps-md-5 text-center text-md-start pt-3 pt-md-0">
+                                    <h3 class="mb-4 text-monsoon-dark fw-light" style="line-height: 1.6;">
+                                        "Remain in the world, yet <span class="text-green fw-semibold">do not become
+                                            bound by it."</span>
+                                    </h3>
+                                    <p class="text-muted mb-0" style="font-size: 1.05rem;">
+                                        Spirituality is not separate from life. It is your natural state.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details & Registration Section -->
+    <!-- Using devdhara-2.jpeg for the logistics background -->
+    <section class="py-5 text-white position-relative logistics-section"
+        style="background: center/cover no-repeat url('/ikshanaa/devdhara-2.jpeg');">
+        <div class="overlay position-absolute w-100 h-100 top-0 start-0" style="background: rgba(44, 62, 80, 0.88);">
+        </div>
+        <div class="container position-relative py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row g-5">
+                        <!-- Location & Dates -->
+                        <div class="col-md-6 border-end-md border-white-50">
+                            <div class="pe-md-4">
+                                <h3 class="mb-4 text-monsoon-accent fw-light">Logistics</h3>
+
+                                <div class="d-flex align-items-start mb-4">
+                                    <i class="bi bi-geo-alt fs-2 me-3 text-white-50"></i>
+                                    <div>
+                                        <h5 class="mb-1 fw-bold">Location</h5>
+                                        <p class="mb-0">Shreejaashram, Khodala</p>
+                                        <p class="small text-white-50 mb-0 mt-1">Nestled in the Sahyadri ranges of
+                                            Maharashtra</p>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex align-items-start">
+                                    <i class="bi bi-calendar-event fs-2 me-3 text-white-50"></i>
+                                    <div>
+                                        <h5 class="mb-1 fw-bold">Dates</h5>
+                                        <p class="mb-0">June 27th – 30th, 2026</p>
+                                        <p class="small text-white-50 mb-0 mt-1">Arrival: 4:00 PM | Departure: 12:00 PM
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact / Alternative to QR Code -->
+                        <div class="col-md-6 text-center text-md-start">
+                            <div class="ps-md-4 h-100 d-flex flex-column justify-content-center">
+                                <h3 class="mb-3 text-monsoon-accent fw-light">Need Assistance?</h3>
+                                <p class="lead mb-4">Please register using the form below to begin this journey.</p>
+
+                                <div class="d-flex align-items-start mb-4">
+                                    <i class="bi bi-envelope fs-2 me-3 text-white-50"></i>
+                                    <div>
+                                        <h5 class="mb-1 fw-bold">Contact Us</h5>
+                                        <p class="mb-0 text-white-75">
+                                            <a href="mailto:uttarannofmaashree@gmail.com"
+                                                class="text-white text-decoration-none">uttarannofmaashree&#64;gmail.com</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <p class="small text-white-50 mt-3 fst-italic">
+                                    (Details and schedule will be shared upon confirmation)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="py-5 bg-light" id="register">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-9 text-center">
-                    <h6 class="subtitle mb-3 text-warning">SHREE GURU</h6>
-                    <h2 class="section-title mb-4">Shree Guru's Mission</h2>
-                    <p class="lead text-muted mb-4">
-                        A Guru is a Divine form, a realized being whose sole life mission is to awaken the human mind,
-                        to help each person see and discover their own true beauty.
-                    </p>
-                    <div class="guru-quote-block p-4 rounded-3 mx-auto">
-                        <p class="mb-4">
-                            Shree Guru's teaching is beautifully simple. <strong>Remain in the world, yet do not become
-                                worldly.</strong> Fulfill your responsibilities, but do not be confined by them. Let
-                            spirituality and daily life move together in harmony, just as the different organs of the
-                            body function in perfect coordination. For, to be spiritual is not something unnatural or
-                            separate. It is our true and original nature.
-                        </p>
-                        <p class="mb-0">
-                            She reminds us that spirituality is not a difficult practice reserved for a few, nor a heavy
-                            discipline to be carried out with strain. With the sincere application of the Guru's
-                            teachings, it becomes possible to walk this highest of paths amidst the responsibilities of
-                            daily life.
-                        </p>
+                <div class="col-lg-8">
+                    <div class="card shadow border-0 overflow-hidden">
+                        <div class="card-header bg-green text-white text-center py-4">
+                            <h3 class="mb-0">Ready to Experience Flow?</h3>
+                            <p class="mb-0 mt-2 text-white-50">Fill out the form below to register</p>
+                        </div>
+                        <div class="card-body p-4 p-md-5">
+                            <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+                                <div class="row g-3">
+                                    <!-- Name -->
+                                    <div class="col-12">
+                                        <label for="name" class="form-label">Full Name <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="name" formControlName="name"
+                                            [class.is-invalid]="f['name'].touched && f['name'].invalid">
+                                        <div class="invalid-feedback" *ngIf="f['name'].errors?.['required']">
+                                            Name is required
+                                        </div>
+                                    </div>
+
+                                    <!-- Age & Gender -->
+                                    <div class="col-md-6">
+                                        <label for="age" class="form-label">Age <span
+                                                class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" id="age" formControlName="age"
+                                            [class.is-invalid]="f['age'].touched && f['age'].invalid">
+                                        <div class="invalid-feedback">Age is required</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="gender" class="form-label">Gender <span
+                                                class="text-danger">*</span></label>
+                                        <select class="form-select" id="gender" formControlName="gender"
+                                            [class.is-invalid]="f['gender'].touched && f['gender'].invalid">
+                                            <option value="">Select Gender</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        <div class="invalid-feedback">Gender is required</div>
+                                    </div>
+
+                                    <!-- Contact Info -->
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Email <span
+                                                class="text-danger">*</span></label>
+                                        <input type="email" class="form-control" id="email" formControlName="email"
+                                            [class.is-invalid]="f['email'].touched && f['email'].invalid">
+                                        <div class="invalid-feedback" *ngIf="f['email'].errors?.['required']">Email is
+                                            required</div>
+                                        <div class="invalid-feedback" *ngIf="f['email'].errors?.['email']">Please enter
+                                            a valid email</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="phone" class="form-label">Phone <span
+                                                class="text-danger">*</span></label>
+                                        <input type="tel" class="form-control" id="phone" formControlName="phone"
+                                            [class.is-invalid]="f['phone'].touched && f['phone'].invalid">
+                                        <div class="invalid-feedback">Phone is required</div>
+                                    </div>
+
+                                    <!-- Location -->
+                                    <div class="col-12">
+                                        <label for="location" class="form-label">Location (City, State) <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="location" formControlName="location"
+                                            [class.is-invalid]="f['location'].touched && f['location'].invalid">
+                                        <div class="invalid-feedback">Location is required</div>
+                                    </div>
+
+                                    <!-- Expectations -->
+                                    <div class="col-12">
+                                        <label for="expectations" class="form-label">What do you hope to gain from
+                                            this?</label>
+                                        <textarea class="form-control" id="expectations" rows="3"
+                                            formControlName="expectations"></textarea>
+                                    </div>
+
+                                    <!-- Physical Ailments -->
+                                    <div class="col-12">
+                                        <label for="ailments" class="form-label">Physical Ailments (Optional)</label>
+                                        <textarea class="form-control" id="ailments" rows="2" formControlName="ailments"
+                                            placeholder="Any physical issues we should be aware of?"></textarea>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <div class="col-12 mt-4">
+                                        <button type="submit"
+                                            class="btn btn-primary bg-green border-0 w-100 py-3 fw-bold letter-spacing-1"
+                                            [disabled]="isSubmitting">
+                                            <span *ngIf="!isSubmitting">REGISTER NOW</span>
+                                            <span *ngIf="isSubmitting" class="spinner-border spinner-border-sm me-2"
+                                                role="status" aria-hidden="true"></span>
+                                            <span *ngIf="isSubmitting">Processing...</span>
+                                        </button>
+                                    </div>
+
+                                    <!-- Status Messages -->
+                                    <div class="col-12" *ngIf="submitStatus">
+                                        <div class="alert"
+                                            [ngClass]="{'alert-success': submitStatus === 'success', 'alert-danger': submitStatus === 'error'}">
+                                            {{ statusMessage }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Connect Section -->
-    <section class="py-5 bg-earth-dark text-white connect-section">
-        <div class="container text-center">
-            <h6 class="text-uppercase text-warning letter-spacing-2 mb-4">VISIT US</h6>
-            <p class="mb-4 text-white-75">Shreejashram, Khodala-401604, Maharashtra</p>
-            <div class="social-links d-flex justify-content-center gap-4 flex-wrap">
-                <a href="https://www.instagram.com/uttaran_shreejashram" target="_blank"
-                    class="social-link text-white text-decoration-none">
-                    <i class="bi bi-instagram fs-4 me-2"></i>
-                    <span class="d-none d-md-inline">Instagram</span>
-                </a>
-                <a href="https://www.facebook.com/Maashree.Uttarann" target="_blank"
-                    class="social-link text-white text-decoration-none">
-                    <i class="bi bi-facebook fs-4 me-2"></i>
-                    <span class="d-none d-md-inline">Facebook</span>
-                </a>
-                <a href="https://www.youtube.com/@maashreesuttarann" target="_blank"
-                    class="social-link text-white text-decoration-none">
-                    <i class="bi bi-youtube fs-4 me-2"></i>
-                    <span class="d-none d-md-inline">YouTube</span>
-                </a>
-            </div>
-            <div class="mt-4">
-                <a href="mailto:uttarannofmaashree@gmail.com"
-                    class="text-warning text-decoration-none">uttarannofmaashree&#64;gmail.com</a>
+    <!-- Closing Thought Section -->
+    <section class="py-5 bg-white text-center">
+        <div class="container py-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <i class="bi bi-droplet text-monsoon-accent fs-1 mb-4 d-block" style="opacity: 0.7;"></i>
+                    <h3 class="fw-light mb-4 text-dark" style="line-height: 1.6;">
+                        Life flows whether we resist it or not. The question is — <br>
+                        <strong class="text-monsoon-dark d-block mt-2">Will you move with it, or against it?</strong>
+                    </h3>
+                    <p class="lead text-green mt-4 fw-medium">
+                        Ikshanaa invites you to experience the ease of Flow.
+                    </p>
+                </div>
             </div>
         </div>
     </section>

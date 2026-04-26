@@ -1,284 +1,309 @@
-.ikshanaa-container {
+// Monsoon Theme Base
+.ikshanaa-container.monsoon-theme {
     font-family: 'Montserrat', sans-serif;
     color: #333;
-}
 
-// Hero Section
-.hero-section {
-    position: relative;
-    height: 70vh;
-    min-height: 450px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.6)),
-        url('/ikshanaa-header.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    // Color Palette
+    $monsoon-dark: #2C3E50;
+    $monsoon-blue: #3A506B;
+    $monsoon-green: #2e5c46;
+    $monsoon-accent: #6eb590; // Softer green/blue accent
+    
+    .text-monsoon-dark {
+        color: $monsoon-dark !important;
+    }
+    .text-monsoon-accent {
+        color: $monsoon-accent !important;
+    }
+    .text-green {
+        color: $monsoon-green !important;
+    }
+    .bg-green {
+        background-color: $monsoon-green !important;
+    }
+    .bg-monsoon-dark {
+        background-color: $monsoon-dark !important;
+    }
+    .text-white-50 {
+        color: rgba(255, 255, 255, 0.5) !important;
+    }
+    .text-white-75 {
+        color: rgba(255, 255, 255, 0.75) !important;
+    }
+    .bg-white-10 {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+    .border-white-25 {
+        border-color: rgba(255, 255, 255, 0.25) !important;
+    }
+    .backdrop-blur {
+        backdrop-filter: blur(10px);
+    }
+    
+    // Common Typography
+    .subtitle {
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
 
-    .hero-overlay {
-        padding: 2rem;
+    .section-title {
+        color: $monsoon-dark;
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
 
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 300;
-            letter-spacing: 6px;
-            text-transform: uppercase;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            margin-bottom: 0.5rem;
-        }
+    .section-title-light {
+        color: #ffffff;
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
 
-        .guru-quote {
-            font-size: 1.2rem;
-            font-weight: 300;
-            letter-spacing: 1px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-            line-height: 1.8;
-        }
+    .highlight {
+        color: $monsoon-green;
+        font-weight: 600;
+    }
 
-        .quote-attribution {
-            font-size: 0.9rem;
-            font-weight: 400;
-            letter-spacing: 2px;
-            color: #d4a574;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        }
+    // Hero Section
+    .hero-section {
+        position: relative;
+        height: 75vh;
+        min-height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-        .stay-tuned-badge {
-            display: inline-block;
-            padding: 0.85rem 2rem;
-            border: 1.5px solid rgba(212, 165, 116, 0.7);
-            border-radius: 50px;
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(6px);
-            color: #d4a574;
-            font-size: 1rem;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-            animation: gentle-pulse 3s ease-in-out infinite;
+        .hero-overlay {
+            padding: 2rem;
+            z-index: 2;
+            width: 100%;
 
-            i {
-                font-size: 1.1rem;
+            h1 {
+                text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            p.text-monsoon-accent {
+                text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+            }
+
+            .hero-quote-box {
+                max-width: 650px;
+                
+                h3 {
+                    font-family: "Georgia", serif;
+                    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+                }
+
+                .text-white-75 {
+                    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+                }
+                
+                .quote-attribution {
+                    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+                }
+            }
+
+            .btn-hero-primary {
+                background: $monsoon-green;
+                color: #ffffff;
+                border: 2px solid $monsoon-green;
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    background: transparent;
+                    border-color: #ffffff;
+                    color: #ffffff;
+                    transform: translateY(-2px);
+                }
             }
         }
     }
-}
 
-@keyframes gentle-pulse {
-    0%, 100% {
-        box-shadow: 0 0 0 0 rgba(212, 165, 116, 0.25);
-    }
-    50% {
-        box-shadow: 0 0 18px 4px rgba(212, 165, 116, 0.15);
-    }
-}
-
-// Common Typography
-.subtitle {
-    font-size: 0.75rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #888;
-    font-weight: 600;
-}
-
-.section-title {
-    color: #2e5c46;
-    font-size: 2.5rem;
-    font-weight: 400;
-}
-
-.section-title-light {
-    color: #ffffff;
-    font-size: 2.5rem;
-    font-weight: 400;
-}
-
-.highlight {
-    color: #d4a574;
-    font-weight: 600;
-}
-
-.text-green {
-    color: #2e5c46 !important;
-}
-
-.bg-green {
-    background-color: #2e5c46 !important;
-}
-
-.bg-earth-dark {
-    background-color: #4a3c31 !important;
-}
-
-.text-white-75 {
-    color: rgba(255, 255, 255, 0.75) !important;
-}
-
-// Philosophy Section
-.philosophy-section {
-    p {
-        color: #555;
-        line-height: 1.9;
-        font-weight: 400;
-        margin-bottom: 1.5rem;
-    }
-
-    .lead {
-        font-size: 1.15rem;
-        font-weight: 400;
-        color: #444;
-        line-height: 1.9;
-    }
-}
-
-// About Section
-.about-section {
-    .about-offerings-card {
-        background: #ffffff;
-        border-left: 4px solid #d4a574;
-
-        li {
-            font-size: 1.05rem;
-            color: #444;
-            line-height: 1.6;
-        }
-    }
-}
-
-// Offer Cards
-.offer-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 12px !important;
-
-    .card-body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card-title {
-        min-height: 3rem;
-        display: flex;
-        align-items: center;
-    }
-
-    .card-text {
-        text-align: center;
-        flex-grow: 1;
-    }
-
-    &:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 30px rgba(46, 92, 70, 0.12) !important;
-    }
-}
-
-// Programme Section
-.programme-section {
-    .activity-item {
-        background: rgba(255, 255, 255, 0.08);
-        padding: 0.75rem 1rem;
-        border-radius: 8px;
-        transition: background 0.3s ease;
-        font-size: 0.95rem;
-
-        &:hover {
-            background: rgba(255, 255, 255, 0.14);
-        }
-
-        i {
-            font-size: 1.1rem;
-            min-width: 24px;
-        }
-    }
-}
-
-// Guru Mission Section
-.guru-mission-section {
-    .guru-quote-block {
-        background: #ffffff;
-        border-left: 4px solid #2e5c46;
-        max-width: 700px;
-        text-align: left;
-
+    // Philosophy / Invitation
+    .philosophy-section {
         p {
             color: #555;
             line-height: 1.9;
-            font-size: 1rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
         }
 
-        strong {
-            color: #2e5c46;
-        }
-    }
-}
-
-// Connect Section
-.connect-section {
-    .social-link {
-        display: inline-flex;
-        align-items: center;
-        padding: 0.5rem 1rem;
-        border-radius: 50px;
-        transition: all 0.3s ease;
-        background: rgba(255, 255, 255, 0.08);
-
-        &:hover {
-            background: rgba(255, 255, 255, 0.18);
-            transform: translateY(-2px);
-        }
-    }
-}
-
-// Mobile Responsiveness
-@media (max-width: 768px) {
-    .hero-section {
-        height: 60vh;
-
-        .hero-overlay h1 {
-            font-size: 2.5rem;
-            letter-spacing: 4px;
-        }
-
-        .hero-overlay .guru-quote {
-            font-size: 1rem;
+        .lead {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #444;
+            line-height: 1.9;
         }
     }
 
-    .section-title,
-    .section-title-light {
-        font-size: 2rem;
-    }
-
+    // Offer Cards
     .offer-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 12px !important;
+        background: #fff;
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card-title {
+            min-height: 3rem;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .card-text {
+            text-align: center;
+            flex-grow: 1;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
         &:hover {
-            transform: none;
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(44, 62, 80, 0.1) !important;
         }
     }
 
-    .connect-section {
-        .social-link span {
-            display: none;
+    // Programme Section
+    .programme-section {
+        .explore-list li {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.5;
+        }
+        
+        .activity-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.85rem 1.25rem;
+            border-radius: 8px;
+            transition: background 0.3s ease, transform 0.2s ease;
+            font-size: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.1);
+                transform: translateX(4px);
+            }
+
+            i {
+                font-size: 1.25rem;
+                min-width: 28px;
+            }
         }
     }
-}
 
-@media (max-width: 480px) {
-    .hero-section {
-        height: 55vh;
-        min-height: 380px;
+    // Discover Section
+    .discover-section {
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(46, 92, 70, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .discover-item:hover .icon-circle {
+            background: rgba(46, 92, 70, 0.2);
+            transform: scale(1.05);
+        }
+    }
 
-        .hero-overlay h1 {
+    // Guru Mission Section
+    .guru-mission-section {
+        .vision-container {
+            border: 1px solid rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            
+            &:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06) !important;
+            }
+        }
+        
+        .border-end-md {
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+            padding-bottom: 2rem;
+            
+            @media (min-width: 768px) {
+                border-bottom: none;
+                border-right: 1px solid rgba(0,0,0,0.06);
+                padding-bottom: 0;
+            }
+        }
+    }
+    
+    // Utilities
+    .object-fit-cover {
+        object-fit: cover;
+    }
+
+    @media (min-width: 768px) {
+        .border-end-md {
+            border-right: 1px solid rgba(0, 0, 0, 0.08);
+        }
+    }
+
+    @media (min-width: 992px) {
+        .border-end-lg {
+            border-right: 1px solid rgba(0, 0, 0, 0.08);
+        }
+    }
+
+    // Mobile Responsiveness
+    @media (max-width: 768px) {
+        .hero-section {
+            height: auto;
+            min-height: 90vh;
+            padding-top: 120px;
+            padding-bottom: 80px;
+
+            .hero-overlay h1 {
+                font-size: 3rem !important;
+                letter-spacing: 4px;
+            }
+
+            .hero-overlay h3.fst-italic {
+                font-size: 1.5rem !important;
+            }
+        }
+
+        .section-title,
+        .section-title-light {
             font-size: 2rem;
-            letter-spacing: 3px;
+        }
+        
+        .monsoon-experience-section img {
+            border-radius: 0 0 20px 20px;
         }
     }
 
-    .section-title,
-    .section-title-light {
-        font-size: 1.75rem;
+    @media (max-width: 480px) {
+        .hero-section {
+            height: auto;
+            min-height: 90vh;
+
+            .hero-overlay h1 {
+                font-size: 2.25rem !important;
+                letter-spacing: 3px;
+            }
+        }
+
+        .section-title,
+        .section-title-light {
+            font-size: 1.75rem;
+        }
     }
 }
