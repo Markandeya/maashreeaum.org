@@ -12,6 +12,7 @@ export const routes: Routes = [
     { path: 'newsletters/jul-2025', loadComponent: () => import('./pages/newsletters/newsletter-jul-2025/newsletter-jul-2025').then(m => m.NewsletterJul2025Component) },
     { path: 'newsletters/jan-apr-2024', loadComponent: () => import('./pages/newsletters/newsletter-jan-apr-2024/newsletter-jan-apr-2024').then(m => m.NewsletterJanApr2024) },
     { path: 'newsletters/may-aug-2024', loadComponent: () => import('./pages/newsletters/newsletter-may-aug-2024/newsletter-may-aug-2024').then(m => m.NewsletterMayAug2024) },
+    { path: 'newsletters/jan-apr-2026', loadComponent: () => import('./pages/newsletters/newsletter-jan-apr-2026/newsletter-jan-apr-2026').then(m => m.NewsletterJanApr2026Component) },
     { path: 'newsletters/oct-dec-2025', loadComponent: () => import('./pages/newsletters/newsletter-oct-dec-2025/newsletter-oct-dec-2025').then(m => m.NewsletterOctDec2025Component) },
     { path: 'newsletters/oct-dec-2024', loadComponent: () => import('./pages/newsletters/newsletter-oct-dec-2024/newsletter-oct-dec-2024').then(m => m.NewsletterOctDec2024) },
     { path: 'books', loadComponent: () => import('./pages/books/books-overview/books-overview').then(m => m.BooksOverviewComponent) },
