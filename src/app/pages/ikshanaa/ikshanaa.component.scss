@@ -1,309 +1,137 @@
-// Monsoon Theme Base
-.ikshanaa-container.monsoon-theme {
-    font-family: 'Montserrat', sans-serif;
-    color: #333;
+.ikshanaa-coming-soon {
 
-    // Color Palette
-    $monsoon-dark: #2C3E50;
-    $monsoon-blue: #3A506B;
-    $monsoon-green: #2e5c46;
-    $monsoon-accent: #6eb590; // Softer green/blue accent
-    
-    .text-monsoon-dark {
-        color: $monsoon-dark !important;
-    }
-    .text-monsoon-accent {
-        color: $monsoon-accent !important;
-    }
-    .text-green {
-        color: $monsoon-green !important;
-    }
-    .bg-green {
-        background-color: $monsoon-green !important;
-    }
-    .bg-monsoon-dark {
-        background-color: $monsoon-dark !important;
-    }
-    .text-white-50 {
-        color: rgba(255, 255, 255, 0.5) !important;
-    }
-    .text-white-75 {
-        color: rgba(255, 255, 255, 0.75) !important;
-    }
-    .bg-white-10 {
-        background-color: rgba(255, 255, 255, 0.1) !important;
-    }
-    .border-white-25 {
-        border-color: rgba(255, 255, 255, 0.25) !important;
-    }
-    .backdrop-blur {
-        backdrop-filter: blur(10px);
-    }
-    
-    // Common Typography
-    .subtitle {
-        font-size: 0.8rem;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        font-weight: 600;
-    }
-
-    .section-title {
-        color: $monsoon-dark;
-        font-size: 2.5rem;
-        font-weight: 500;
-    }
-
-    .section-title-light {
-        color: #ffffff;
-        font-size: 2.5rem;
-        font-weight: 500;
-    }
-
-    .highlight {
-        color: $monsoon-green;
-        font-weight: 600;
-    }
-
-    // Hero Section
     .hero-section {
         position: relative;
-        height: 75vh;
-        min-height: 500px;
+        min-height: 100vh;
         background-size: cover;
-        background-position: center;
+        background-position: center top;
         background-repeat: no-repeat;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 2rem;
+    }
 
-        .hero-overlay {
-            padding: 2rem;
-            z-index: 2;
-            width: 100%;
+    // Much darker, gradient overlay for readability
+    .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            160deg,
+            rgba(0, 0, 0, 0.75) 0%,
+            rgba(10, 20, 15, 0.88) 60%,
+            rgba(0, 0, 0, 0.92) 100%
+        );
+    }
 
-            h1 {
-                text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-                font-family: 'Montserrat', sans-serif;
-            }
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 620px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
 
-            p.text-monsoon-accent {
-                text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
-            }
+    .eyebrow {
+        font-size: 0.7rem;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: #6eb590;
+        font-weight: 600;
+        margin-bottom: 1.25rem;
+    }
 
-            .hero-quote-box {
-                max-width: 650px;
-                
-                h3 {
-                    font-family: "Georgia", serif;
-                    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-                }
+    .wordmark {
+        font-size: clamp(4rem, 12vw, 8rem);
+        font-weight: 200;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: #ffffff;
+        text-shadow: 0 4px 24px rgba(0, 0, 0, 0.6);
+        line-height: 1;
+        margin-bottom: 1rem;
+        font-family: 'Montserrat', sans-serif;
+    }
 
-                .text-white-75 {
-                    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-                }
-                
-                .quote-attribution {
-                    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
-                }
-            }
+    .tagline {
+        font-size: 0.85rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.55);
+        font-weight: 400;
+        margin-bottom: 2.5rem;
+    }
 
-            .btn-hero-primary {
-                background: $monsoon-green;
-                color: #ffffff;
-                border: 2px solid $monsoon-green;
-                transition: all 0.3s ease;
-                
-                &:hover {
-                    background: transparent;
-                    border-color: #ffffff;
-                    color: #ffffff;
-                    transform: translateY(-2px);
-                }
-            }
+    .divider {
+        width: 48px;
+        height: 1px;
+        background: #6eb590;
+        opacity: 0.6;
+        margin-bottom: 2.5rem;
+    }
+
+    .description {
+        font-size: 1.05rem;
+        line-height: 1.85;
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: 300;
+        max-width: 480px;
+        margin-bottom: 2.5rem;
+    }
+
+    .coming-soon-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        background: rgba(110, 181, 144, 0.12);
+        border: 1px solid rgba(110, 181, 144, 0.3);
+        color: #6eb590;
+        font-size: 0.78rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding: 0.55rem 1.25rem;
+        border-radius: 100px;
+        margin-bottom: 3rem;
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #6eb590;
+            animation: pulse 2s ease-in-out infinite;
         }
     }
 
-    // Philosophy / Invitation
-    .philosophy-section {
-        p {
-            color: #555;
-            line-height: 1.9;
-            font-weight: 400;
-            margin-bottom: 1.5rem;
-            font-size: 1.05rem;
-        }
-
-        .lead {
-            font-size: 1.2rem;
-            font-weight: 400;
-            color: #444;
-            line-height: 1.9;
-        }
-    }
-
-    // Offer Cards
-    .offer-card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        border-radius: 12px !important;
-        background: #fff;
-
-        .card-body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .card-title {
-            min-height: 3rem;
-            display: flex;
-            align-items: center;
-            font-weight: 600;
-        }
-
-        .card-text {
-            text-align: center;
-            flex-grow: 1;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
+    .home-link {
+        font-size: 0.78rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.35);
+        text-decoration: none;
+        transition: color 0.2s ease;
 
         &:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(44, 62, 80, 0.1) !important;
+            color: #6eb590;
         }
     }
 
-    // Programme Section
-    .programme-section {
-        .explore-list li {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.5;
-        }
-        
-        .activity-item {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 0.85rem 1.25rem;
-            border-radius: 8px;
-            transition: background 0.3s ease, transform 0.2s ease;
-            font-size: 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-
-            &:hover {
-                background: rgba(255, 255, 255, 0.1);
-                transform: translateX(4px);
-            }
-
-            i {
-                font-size: 1.25rem;
-                min-width: 28px;
-            }
-        }
-    }
-
-    // Discover Section
-    .discover-section {
-        .icon-circle {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: rgba(46, 92, 70, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-        
-        .discover-item:hover .icon-circle {
-            background: rgba(46, 92, 70, 0.2);
-            transform: scale(1.05);
-        }
-    }
-
-    // Guru Mission Section
-    .guru-mission-section {
-        .vision-container {
-            border: 1px solid rgba(0, 0, 0, 0.04);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            
-            &:hover {
-                transform: translateY(-4px);
-                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06) !important;
-            }
-        }
-        
-        .border-end-md {
-            border-bottom: 1px solid rgba(0,0,0,0.06);
-            padding-bottom: 2rem;
-            
-            @media (min-width: 768px) {
-                border-bottom: none;
-                border-right: 1px solid rgba(0,0,0,0.06);
-                padding-bottom: 0;
-            }
-        }
-    }
-    
-    // Utilities
-    .object-fit-cover {
-        object-fit: cover;
-    }
-
-    @media (min-width: 768px) {
-        .border-end-md {
-            border-right: 1px solid rgba(0, 0, 0, 0.08);
-        }
-    }
-
-    @media (min-width: 992px) {
-        .border-end-lg {
-            border-right: 1px solid rgba(0, 0, 0, 0.08);
-        }
-    }
-
-    // Mobile Responsiveness
-    @media (max-width: 768px) {
-        .hero-section {
-            height: auto;
-            min-height: 90vh;
-            padding-top: 120px;
-            padding-bottom: 80px;
-
-            .hero-overlay h1 {
-                font-size: 3rem !important;
-                letter-spacing: 4px;
-            }
-
-            .hero-overlay h3.fst-italic {
-                font-size: 1.5rem !important;
-            }
-        }
-
-        .section-title,
-        .section-title-light {
-            font-size: 2rem;
-        }
-        
-        .monsoon-experience-section img {
-            border-radius: 0 0 20px 20px;
-        }
+    @keyframes pulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50%       { opacity: 0.4; transform: scale(0.85); }
     }
 
     @media (max-width: 480px) {
-        .hero-section {
-            height: auto;
-            min-height: 90vh;
-
-            .hero-overlay h1 {
-                font-size: 2.25rem !important;
-                letter-spacing: 3px;
-            }
+        .wordmark {
+            letter-spacing: 0.2em;
         }
 
-        .section-title,
-        .section-title-light {
-            font-size: 1.75rem;
+        .description {
+            font-size: 0.95rem;
         }
     }
 }

@@ -21,6 +21,7 @@ export const routes: Routes = [
     { path: 'karmayog/bhavasana', loadComponent: () => import('./pages/karmayog/bhavasana-page/bhavasana.component').then(m => m.BhavasanaComponent) },
     { path: 'karmayog/shree-guru-vidyalaya', loadComponent: () => import('./pages/karmayog/shree-guru-vidyalaya-page/shree-guru-vidyalaya.component').then(m => m.ShreeGuruVidyalayaComponent) },
     { path: 'ikshanaa', loadComponent: () => import('./pages/ikshanaa/ikshanaa.component').then(m => m.IkshanaaComponent) },
+    { path: 'ikshanaa/jun-2026', loadComponent: () => import('./pages/ikshanaa-jun-2026/ikshanaa-jun-2026.component').then(m => m.IkshanaaJun2026Component) },
     { path: 'privacy-policy', loadComponent: () => import('./pages/privacy-policy/privacy-policy').then(m => m.PrivacyPolicyComponent) },
     { path: 'wip', loadComponent: () => import('./pages/wip/wip.component').then(m => m.WipComponent) },
     { path: '404', loadComponent: () => import('./pages/not-found/not-found').then(m => m.NotFoundComponent) },
