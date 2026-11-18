@@ -1,0 +1,22 @@
+<div class="mt-4" role="region" aria-roledescription="carousel" aria-labelledby="ikshanaa-gallery-title">
+    <h3 class="h5 mb-3" id="ikshanaa-gallery-title">Moments from June 2026</h3>
+    <div class="gallery-track" #track id="ikshanaa-gallery-photos" tabindex="0" aria-label="June Programme photos"
+        (scroll)="updateActiveSlide(track)">
+        @for (photo of photos; track photo.file) {
+            <div class="gallery-slide" role="group" aria-roledescription="slide" [attr.aria-label]="($index + 1) + ' of ' + photos.length">
+                <img [src]="'/ikshanaa/june-' + photo.file + '.webp'"
+                    [srcset]="'/ikshanaa/june-' + photo.file + '-small.webp ' + photo.smallWidth + 'w, /ikshanaa/june-' + photo.file + '.webp ' + photo.width + 'w'"
+                    [sizes]="photo.portrait ? 'clamp(216px, 49vw, 384px)' : 'min(calc(100vw - 24px), 682px)'"
+                    [width]="photo.width" [height]="photo.width * (photo.portrait ? 4 / 3 : 3 / 4)"
+                    [alt]="photo.alt" loading="lazy" decoding="async">
+            </div>
+        }
+    </div>
+    <div class="d-flex align-items-center justify-content-center gap-3 mt-3">
+        <button class="gallery-button" type="button" aria-label="Previous photo" aria-controls="ikshanaa-gallery-photos"
+            [disabled]="activeSlide() === 0" (click)="moveSlide(track, -1)">←</button>
+        <span class="small" aria-live="polite" aria-atomic="true">{{ activeSlide() + 1 }} / {{ photos.length }}</span>
+        <button class="gallery-button" type="button" aria-label="Next photo" aria-controls="ikshanaa-gallery-photos"
+            [disabled]="activeSlide() === photos.length - 1" (click)="moveSlide(track, 1)">→</button>
+    </div>
+</div>

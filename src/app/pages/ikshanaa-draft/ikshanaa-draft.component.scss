@@ -1,0 +1,499 @@
+.ikshanaa {
+    --ink: #23384a;
+    --muted: #4b5f70;
+    --mist: #eef4f8;
+    --ice: #dceaf5;
+    --ice-hover: #cbdfee;
+    --line: #c7d4df;
+    color: var(--ink);
+    background: #fff;
+}
+
+.hero {
+    position: relative;
+    isolation: isolate;
+    min-height: clamp(42rem, 78svh, 55rem);
+    background: var(--mist);
+    text-align: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding-block: clamp(3rem, 6vh, 5rem) 2rem;
+}
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+
+    &::after {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, #eef4f8 0%, #eef4f8f7 24%, #eef4f8df 45%, #eef4f880 58%, #eef4f800 78%);
+        content: '';
+    }
+
+    &::before {
+        position: absolute;
+        z-index: 1;
+        inset: auto 0 0;
+        height: clamp(0.75rem, 2.5vw, 2.5rem);
+        background: linear-gradient(transparent, #f7fafd);
+        content: '';
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 57%;
+    }
+}
+
+.eyebrow {
+    margin-bottom: 0.9rem;
+    color: var(--muted);
+    font-size: 0.76rem;
+    font-weight: 650;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: clamp(2.65rem, 8vw, 6.75rem);
+    font-weight: 300;
+    line-height: 1.04;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.hero-theme {
+    margin: 1rem auto 0.6rem;
+    font: italic clamp(1.38rem, 2.45vw, 2.15rem)/1.2 Georgia, serif;
+    text-wrap: balance;
+}
+
+.hero-line {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.hero-details {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.35rem 1.25rem;
+    margin-block: 1.35rem 1.2rem;
+    font-size: 0.87rem;
+    font-weight: 650;
+}
+
+.hero-details span + span {
+    padding-inline-start: 1.25rem;
+    border-inline-start: 1px solid #97afc2;
+}
+
+.programme-content {
+    overflow-x: clip;
+    background:
+        radial-gradient(ellipse 52% 24% at 4% 18%, #dceaf69e, transparent),
+        radial-gradient(ellipse 62% 22% at 95% 40%, #e4e4f8b5, transparent),
+        radial-gradient(ellipse 68% 25% at 5% 72%, #dceaf6bf, transparent),
+        radial-gradient(ellipse 74% 22% at 96% 94%, #e7e8f8cf, transparent),
+        linear-gradient(#f7fafd, #fffaf4 48%, #f1f6fa);
+}
+
+.section {
+    padding-block: clamp(2.5rem, 5.5vw, 5rem);
+}
+
+.section-ornament {
+    --ochre: #aa7e43;
+    display: grid;
+    grid-template-columns: 1fr 3rem 1fr;
+    align-items: center;
+    gap: 0.85rem;
+    width: min(19rem, 60%);
+    height: 2.5rem;
+    margin-inline: auto;
+
+    &::before, &::after {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #aa7e4380);
+        content: '';
+    }
+
+    &::after {
+        transform: scaleX(-1);
+    }
+
+    span, span::before, span::after {
+        width: 1.2rem;
+        height: 1.2rem;
+        border: 1px solid var(--ochre);
+        border-radius: 3px 75% 3px 75%;
+    }
+
+    span {
+        position: relative;
+        justify-self: center;
+        transform: rotate(45deg);
+    }
+
+    span::before, span::after {
+        position: absolute;
+        content: '';
+        transform-origin: bottom right;
+    }
+
+    span::before {
+        inset: -2px 0 0 -2px;
+        transform: rotate(-37deg);
+    }
+
+    span::after {
+        inset: -2px 0 0 -2px;
+        transform: rotate(37deg);
+    }
+}
+
+h2 {
+    margin-bottom: 1.15rem;
+    font-size: clamp(1.9rem, 4vw, 3.15rem);
+    font-weight: 450;
+    line-height: 1.15;
+    text-wrap: balance;
+}
+
+.section > p:not(.eyebrow), .split p:not(.eyebrow), .enquiry-grid > div > p:not(.eyebrow) {
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+.invitation {
+    max-width: 53rem;
+    text-align: center;
+
+    p:not(.eyebrow) {
+        max-width: 63ch;
+        margin-inline: auto;
+    }
+
+    p + p { margin-top: 1rem; }
+}
+
+.reflection {
+    background: linear-gradient(#f7fafde8, #f7fafdf5), url('/ikshanaa/shreejaashram.webp') center / cover;
+}
+
+.split, .enquiry-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: clamp(2rem, 7vw, 6rem);
+}
+
+.photo {
+    position: relative;
+    isolation: isolate;
+    margin: 0;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+    }
+
+    figcaption {
+        margin-top: 0.65rem;
+        color: var(--muted);
+        font-size: 0.78rem;
+    }
+}
+
+.photo-flower {
+    --flower-overhang: clamp(1.25rem, 4.5vw, 5rem);
+    --flower-lift: clamp(3.25rem, 7vw, 7rem);
+    position: absolute;
+    z-index: -1;
+    inset: var(--flower-position);
+    width: clamp(12rem, 24vw, 21rem);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--flower-tint), transparent 68%);
+    pointer-events: none;
+    transform: rotate(var(--flower-angle));
+
+    i {
+        position: absolute;
+        inset: 0;
+    }
+
+    i:nth-child(2) { transform: rotate(45deg); }
+    i:nth-child(3) { transform: rotate(90deg); }
+    i:nth-child(4) { transform: rotate(135deg); }
+
+    i::before, i::after {
+        position: absolute;
+        top: 0;
+        left: calc((100% - var(--petal-width)) / 2);
+        width: var(--petal-width);
+        height: 50%;
+        border: 1.5px solid var(--flower-ink);
+        border-radius: var(--petal-shape);
+        background: var(--flower-tint);
+        content: '';
+    }
+
+    i::after {
+        top: 50%;
+        transform: rotate(180deg);
+    }
+}
+
+.photo-dahlia {
+    --flower-position: calc(-1 * var(--flower-lift)) calc(-1 * var(--flower-overhang)) auto auto;
+    --flower-angle: 18deg;
+    --flower-ink: #ad803d75;
+    --flower-tint: #eed2a335;
+    --petal-width: 25%;
+    --petal-shape: 70% 12% 70% 22%;
+}
+
+.photo-cosmos {
+    --flower-position: auto auto calc(-0.75 * var(--flower-lift)) calc(-1 * var(--flower-overhang));
+    --flower-angle: 10deg;
+    --flower-ink: #658da67a;
+    --flower-tint: #b8d0e240;
+    --petal-width: 32%;
+    --petal-shape: 52% 52% 74% 74%;
+}
+
+.photo-camellia {
+    --flower-position: calc(-0.8 * var(--flower-lift)) auto auto calc(-1 * var(--flower-overhang));
+    --flower-angle: -15deg;
+    --flower-ink: #886eac75;
+    --flower-tint: #d1bfe842;
+    --petal-width: 40%;
+    --petal-shape: 60% 55% 20% 85%;
+}
+
+.experience .photo img {
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+    object-position: center 51%;
+}
+
+.guidance .photo {
+    width: min(100%, 26rem);
+    justify-self: center;
+}
+
+.shree-pada {
+    display: block;
+    margin-top: 1.65rem;
+}
+
+.explore-list, .venue-card dl {
+    margin: 1.25rem 0;
+}
+
+.explore-list div, .venue-card dl div {
+    padding-block: 0.75rem;
+    border-top: 1px solid var(--line);
+}
+
+.explore-list dd, .venue-card dd {
+    margin: 0.2rem 0 0;
+    color: var(--muted);
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 1.2rem;
+    font-weight: 650;
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+    overflow-wrap: anywhere;
+}
+
+.text-link:hover {
+    color: inherit;
+    text-decoration-thickness: 2px;
+}
+
+.action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    min-height: 2.9rem;
+    padding: 0.65rem 1.35rem;
+    border: 1px solid transparent;
+    border-radius: 2rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:disabled {
+        opacity: 0.65;
+    }
+}
+
+.action-primary {
+    color: var(--ink);
+    background: var(--ice);
+    border-color: #adcbdf;
+
+    &:hover:not(:disabled) {
+        color: var(--ink);
+        background: var(--ice-hover);
+    }
+}
+
+.action-outline {
+    color: var(--ink);
+    border-color: #97afc2;
+
+    &:hover {
+        color: var(--ink);
+        background: var(--ice);
+    }
+}
+
+.route-map {
+    grid-column: 1 / -1;
+    width: 100%;
+    height: clamp(21rem, 48vw, 28rem);
+    border: 0;
+    border-radius: 0.5rem;
+    background: var(--mist);
+}
+
+.venue-card, .enquiry-form {
+    padding: clamp(1.25rem, 4vw, 2rem);
+    border: 1px solid var(--line);
+    border-radius: 0.5rem;
+}
+
+.venue-card {
+    background: #f9fbfd;
+
+    dl {
+        margin-top: 0;
+    }
+
+    dl div:first-child {
+        border: 0;
+        padding-top: 0;
+    }
+}
+
+.enquiry-grid {
+    align-items: start;
+}
+
+.enquiry-closing { grid-column: 1 / -1; }
+
+.enquiry-form, .field {
+    display: grid;
+    gap: 0.9rem;
+}
+
+.enquiry-form {
+    justify-items: start;
+    background: white;
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+.field {
+    gap: 0.3rem;
+    width: 100%;
+    min-width: 0;
+
+    label {
+        font-size: 0.88rem;
+        font-weight: 600;
+    }
+
+    label span {
+        font-weight: 400;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 0.55rem 0.65rem;
+        border: 1px solid #7d8fa0;
+        border-radius: 0.25rem;
+        color: var(--ink);
+        background: white;
+    }
+
+    [aria-invalid='true'] {
+        border-color: #a52c23;
+    }
+}
+
+.enquiry-form p {
+    font-size: 0.85rem;
+}
+
+.enquiry-form .field-error, .enquiry-form .error {
+    color: #a52c23;
+}
+
+.enquiry-form .success {
+    color: #28583a;
+}
+
+.enquiry-form [role='status']:empty {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding-block: 2.6rem 1.4rem;
+    }
+
+    .hero-image {
+        position: relative;
+
+        &::after {
+            background: linear-gradient(180deg, var(--mist), transparent 50%);
+        }
+
+        img {
+            height: auto;
+            aspect-ratio: 4 / 3;
+        }
+    }
+
+    .hero-details {
+        flex-direction: column;
+    }
+
+    .hero-details span + span {
+        padding: 0;
+        border: 0;
+    }
+
+    .split, .enquiry-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .ashram .photo {
+        order: 1;
+    }
+}
