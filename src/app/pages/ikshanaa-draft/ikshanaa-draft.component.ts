@@ -1,7 +1,7 @@
 import { Component, DestroyRef, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Meta, MetaDefinition, Title } from '@angular/platform-browser';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import * as emailjs from '@emailjs/browser';
 import { IkshanaaJuneGalleryComponent } from './ikshanaa-june-gallery.component';
 
@@ -31,6 +31,7 @@ export class IkshanaaDraftComponent {
     constructor() {
         const title = inject(Title);
         const meta = inject(Meta);
+        const isDraft = inject(ActivatedRoute).snapshot.routeConfig?.path === 'ikshanaa-draft';
         const originalTitle = title.getTitle();
         const pageTitle = 'Ikshanaa | December 2026 Programme | Shreejaashram';
         const description = 'Ikshanaa is a residential spiritual Programme for self-enquiry at Shreejaashram, Khodala, from 16 to 19 December 2026.';
@@ -38,14 +39,18 @@ export class IkshanaaDraftComponent {
             { property: 'og:title', content: pageTitle },
             { property: 'og:description', content: description },
             { property: 'og:type', content: 'website' },
-            { property: 'og:url', content: 'https://maashreeaum.org/ikshanaa-draft' },
+            { property: 'og:url', content: 'https://maashreeaum.org/ikshanaa' },
             { property: 'og:image', content: 'https://maashreeaum.org/ikshanaa/meditation.jpg' },
             { property: 'og:image:alt', content: 'Ikshanaa participants sitting in meditation overlooking the Sahyadri hills' }
         ];
 
         const originalDescription = meta.getTag('name="description"')?.content;
         title.setTitle(pageTitle);
-        meta.updateTag({ name: 'robots', content: 'noindex' });
+        if (isDraft) {
+            meta.updateTag({ name: 'robots', content: 'noindex' });
+        } else {
+            meta.removeTag('name="robots"');
+        }
         meta.updateTag({ name: 'description', content: description });
         for (const tag of tags) meta.updateTag(tag);
 
